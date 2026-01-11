@@ -129,6 +129,11 @@ const Header = () => {
           <span className="logo-icon">
             <img src="/logo.png" alt="Quantum Accounting Advisory" className="logo-img" />
           </span>
+          <span className="logo-text">
+            <span>Quantum</span>
+            <span>Accounting</span>
+            <span>Advisory</span>
+          </span>
         </Link>
         <button
           className="mobile-menu-toggle"

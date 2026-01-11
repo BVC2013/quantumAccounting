@@ -106,6 +106,24 @@ nav {
   flex-direction: column;
   line-height: 1.1;
   font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+}
+
+.logo-text span:first-child {
+  color: var(--primary-navy);
+  font-size: 1.6rem;
+}
+
+.logo-text span:nth-child(2) {
+  color: var(--primary-blue);
+  font-size: 1.4rem;
+}
+
+.logo-text span:last-child {
+  color: var(--secondary-cyan);
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .logo:hover {
@@ -253,7 +271,7 @@ nav {
 }
 
 .dropdown.scrollable::-webkit-scrollbar-track {
-  background: var(--bg-light);
+  background: var(--neutral-offwhite);
   border-radius: 3px;
 }
 
@@ -519,7 +537,7 @@ nav {
 }
 
 .content-section.alt-bg {
-  background-color: var(--bg-light);
+  background-color: var(--neutral-offwhite);
 }
 
 .section-title {
@@ -677,7 +695,7 @@ nav {
 
 /* Sidebar */
 .sidebar {
-  background: var(--bg-light);
+  background: var(--neutral-offwhite);
   padding: 2rem;
   border-radius: 8px;
   border: 1px solid var(--border-color);
@@ -726,7 +744,7 @@ nav {
 
 /* Trust Section */
 .trust-section {
-  background: linear-gradient(to bottom, var(--bg-light) 0%, var(--white) 100%);
+  background: linear-gradient(to bottom, var(--neutral-offwhite) 0%, var(--white) 100%);
   padding: 4rem 0;
   position: relative;
 }
