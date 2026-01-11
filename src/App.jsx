@@ -8,6 +8,8 @@ import TaxServices from './pages/TaxServices';
 import Contact from './pages/Contact';
 import BookMeeting from './pages/BookMeeting';
 import GenericPage from './pages/GenericPage';
+import FinancialCalculators from './pages/FinancialCalculators';
+import IrsForms from './pages/IrsForms';
 import './index.css';
 
 // Import banner images from assets
@@ -165,6 +167,7 @@ const simplePages = {
   estatePlanning: { title: 'Estate Planning', description: 'Protect your legacy and provide for your loved ones with comprehensive estate planning services.', backgroundImage: bannerPlanning },
   smallBusinessAccounting: { title: 'Small Business Accounting', description: 'Complete accounting solutions designed specifically for small businesses.', backgroundImage: bannerTeamMeeting },
   bookkeeping: { title: 'Bookkeeping Services', description: 'Accurate, timely bookkeeping to keep your business finances organized.', backgroundImage: bannerLaptopNotes },
+  cfoServices: { title: 'CFO Services', description: 'Strategic financial leadership and guidance for growing businesses.', backgroundImage: bannerTeamMeeting },
   payroll: { title: 'Payroll Services', description: 'Comprehensive payroll processing, tax filings, and compliance management.', backgroundImage: bannerTeamMeeting },
   auditsReviews: { title: 'Audits, Reviews & Compilations', description: 'Professional assurance services for your financial statements.', backgroundImage: bannerFeedback },
   cashFlowManagement: { title: 'Cash Flow Management', description: 'Strategies to optimize your cash flow and improve business health.', backgroundImage: bannerPlanning },
@@ -194,6 +197,8 @@ const simplePages = {
   quickbooksTraining: { title: 'QuickBooks Training', description: 'Learn to use QuickBooks effectively with our training.', backgroundImage: bannerMacbook },
   quickbooksTuneup: { title: 'QuickBooks Tune-Up', description: 'Clean up and optimize your QuickBooks file.', backgroundImage: bannerMacbook },
   construction: { title: 'Construction Industry', description: 'Specialized accounting for contractors and builders.', backgroundImage: bannerTechMeeting },
+  restaurants: { title: 'Restaurants', description: 'Specialized accounting for restaurants and food service.', backgroundImage: bannerTechMeeting },
+  retail: { title: 'Retail', description: 'Accounting solutions for retail businesses.', backgroundImage: bannerTechMeeting },
   healthcare: { title: 'Healthcare Industry', description: 'Accounting services for medical practices.', backgroundImage: bannerTechMeeting },
   dentists: { title: 'Dental Practices', description: 'Specialized accounting for dental offices.', backgroundImage: bannerTechMeeting },
   hospitality: { title: 'Hospitality Industry', description: 'Accounting for restaurants and hotels.', backgroundImage: bannerTechMeeting },
@@ -252,6 +257,7 @@ function App() {
           <Route path="/estate-planning" element={<GenericPage {...simplePages.estatePlanning} />} />
           <Route path="/small-business-accounting" element={<GenericPage {...simplePages.smallBusinessAccounting} />} />
           <Route path="/bookkeeping" element={<GenericPage {...simplePages.bookkeeping} />} />
+          <Route path="/cfo-services" element={<GenericPage {...simplePages.cfoServices} />} />
           <Route path="/payroll" element={<GenericPage {...simplePages.payroll} />} />
           <Route path="/audits-reviews" element={<GenericPage {...simplePages.auditsReviews} />} />
           <Route path="/cash-flow-management" element={<GenericPage {...simplePages.cashFlowManagement} />} />
@@ -281,6 +287,8 @@ function App() {
           <Route path="/quickbooks-training" element={<GenericPage {...simplePages.quickbooksTraining} />} />
           <Route path="/quickbooks-tuneup" element={<GenericPage {...simplePages.quickbooksTuneup} />} />
           <Route path="/construction" element={<GenericPage {...simplePages.construction} />} />
+          <Route path="/restaurants" element={<GenericPage {...simplePages.restaurants} />} />
+          <Route path="/retail" element={<GenericPage {...simplePages.retail} />} />
           <Route path="/healthcare" element={<GenericPage {...simplePages.healthcare} />} />
           <Route path="/dentists" element={<GenericPage {...simplePages.dentists} />} />
           <Route path="/hospitality" element={<GenericPage {...simplePages.hospitality} />} />
@@ -290,7 +298,7 @@ function App() {
           <Route path="/refund-tracking" element={<GenericPage {...simplePages.refundTracking} />} />
           <Route path="/tax-due-dates" element={<GenericPage {...simplePages.taxDueDates} />} />
           <Route path="/tax-rates" element={<GenericPage {...simplePages.taxRates} />} />
-          <Route path="/irs-forms" element={<GenericPage {...simplePages.irsForms} />} />
+          <Route path="/irs-forms" element={<IrsForms />} />
           <Route path="/record-retention" element={<GenericPage {...simplePages.recordRetention} />} />
           <Route path="/state-tax-forms" element={<GenericPage {...simplePages.stateTaxForms} />} />
           <Route path="/newsletter" element={<GenericPage {...simplePages.newsletter} />} />
@@ -299,7 +307,7 @@ function App() {
           <Route path="/business-strategies" element={<GenericPage {...simplePages.businessStrategies} />} />
           <Route path="/investment-strategies" element={<GenericPage {...simplePages.investmentStrategies} />} />
           <Route path="/faq" element={<GenericPage {...simplePages.faq} />} />
-          <Route path="/financial-calculators" element={<GenericPage {...simplePages.financialCalculators} />} />
+          <Route path="/financial-calculators" element={<FinancialCalculators />} />
           <Route path="/client-portal" element={<GenericPage {...simplePages.clientPortal} />} />
           <Route path="/secure-upload" element={<GenericPage {...simplePages.secureUpload} />} />
           <Route path="/blog" element={<GenericPage {...simplePages.blog} />} />

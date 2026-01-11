@@ -22,13 +22,8 @@ const Header = () => {
         { label: 'Our Values', path: '/our-values' },
         { label: 'Contact Us', path: '/contact' },
         { label: 'Book a Meeting', path: '/book-meeting' },
-        { label: 'Client Portal', path: '/client-portal' },
         { label: 'Secure Upload', path: '/secure-upload' },
-        { label: 'FAQ', path: '/faq' },
-        { label: 'Blog', path: '/blog' },
         { label: 'Newsletter', path: '/newsletter' },
-        { label: 'Privacy Policy', path: '/privacy-policy' },
-        { label: 'Disclaimer', path: '/disclaimer' },
         { label: 'Security Measures', path: '/security-measures' },
         { label: 'Sitemap', path: '/sitemap' },
       ],
@@ -67,16 +62,13 @@ const Header = () => {
       path: '/services-business',
       dropdown: [
         { label: 'Services Overview', path: '/services-business' },
-        { label: 'Small Business Accounting', path: '/small-business-accounting' },
         { label: 'Business Tax Preparation', path: '/tax-preparation-business' },
         { label: 'Tax Strategies', path: '/tax-strategies-business' },
         { label: 'Bookkeeping', path: '/bookkeeping' },
+        { label: 'CFO Services', path: '/cfo-services' },
         { label: 'Payroll Services', path: '/payroll' },
-        { label: 'Payroll Tax Issues', path: '/payroll-tax-issues' },
         { label: 'Cash Flow Management', path: '/cash-flow-management' },
         { label: 'Business Advisory', path: '/business-advisory' },
-        { label: 'Financial Planning', path: '/financial-planning-business' },
-        { label: 'Business Strategies', path: '/business-strategies' },
         { label: 'New Business Formation', path: '/new-business-formation' },
         { label: 'Audits & Reviews', path: '/audits-reviews' },
         { label: 'Internal Controls', path: '/internal-controls' },
@@ -87,15 +79,21 @@ const Header = () => {
         { label: 'QuickBooks Setup', path: '/quickbooks-setup' },
         { label: 'QuickBooks Training', path: '/quickbooks-training' },
         { label: 'QuickBooks Tune-Up', path: '/quickbooks-tuneup' },
-        { label: '── Industries ──', path: '/industries', isHeader: true },
+      ],
+    },
+    {
+      label: 'Industries',
+      path: '/industries',
+      dropdown: [
         { label: 'Industries Overview', path: '/industries' },
         { label: 'Construction', path: '/construction' },
-        { label: 'Healthcare', path: '/healthcare' },
-        { label: 'Dentists', path: '/dentists' },
-        { label: 'Hospitality', path: '/hospitality' },
-        { label: 'Law Firms', path: '/law-firms' },
+        { label: 'Restaurants', path: '/restaurants' },
+        { label: 'Retail', path: '/retail' },
         { label: 'Manufacturing', path: '/manufacturing' },
+        { label: 'Dentists', path: '/dentists' },
+        { label: 'Healthcare', path: '/healthcare' },
         { label: 'Real Estate', path: '/real-estate' },
+        { label: 'Law Firms', path: '/law-firms' },
       ],
     },
     {
@@ -104,14 +102,21 @@ const Header = () => {
       dropdown: [
         { label: 'Tax Center Overview', path: '/tax-center' },
         { label: 'Tax Services', path: '/tax-services' },
-        { label: 'Track Your Refund', path: '/refund-tracking' },
-        { label: 'Tax Due Dates', path: '/tax-due-dates' },
-        { label: 'Tax Rates', path: '/tax-rates' },
-        { label: 'IRS Forms', path: '/irs-forms' },
-        { label: 'State Tax Forms', path: '/state-tax-forms' },
         { label: 'Record Retention Guide', path: '/record-retention' },
         { label: 'IRS Record Retrieval', path: '/irs-record-retrieval' },
-        { label: 'Resources', path: '/resources' },
+      ],
+    },
+    {
+      label: 'Resources',
+      path: '/resources',
+      dropdown: [
+        { label: 'Resources Overview', path: '/resources' },
+        { label: 'Financial Calculator', path: '/financial-calculators' },
+        { label: 'IRS Forms & Publications', path: '/irs-forms' },
+        { label: 'Tax Rates', path: '/tax-rates' },
+        { label: 'State Tax Forms', path: '/state-tax-forms' },
+        { label: 'Track Your Refund', path: '/refund-tracking' },
+        { label: 'Tax Due Dates', path: '/tax-due-dates' },
       ],
     },
   ];
@@ -166,6 +171,8 @@ const Header = () => {
                       <li key={subItem.path + subItem.label}>
                         {subItem.isHeader ? (
                           <span className="dropdown-header">{subItem.label}</span>
+                        ) : subItem.external ? (
+                          <a href={subItem.path} target="_blank" rel="noopener noreferrer">{subItem.label}</a>
                         ) : (
                           <Link to={subItem.path}>{subItem.label}</Link>
                         )}

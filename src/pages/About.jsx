@@ -129,6 +129,11 @@ const About = ({ backgroundImage = '' }) => {
                 <p className="pillar-what">Real-time dashboards and deadlines</p>
                 <p className="pillar-why">Client stays informed and in command</p>
               </div>
+              <div className="pillar-card">
+                <h3>Comprehensive</h3>
+                <p className="pillar-what">End-to-end approach — never viewing business challenges in isolation</p>
+                <p className="pillar-why">Holistic solutions that address root causes, not just symptoms</p>
+              </div>
             </div>
 
             <p>
