@@ -1,47 +1,18 @@
 import { Link, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useState } from 'react';
 import Breadcrumb from './Breadcrumb';
 
 const PageBanner = ({ 
   title, 
   backgroundImage, 
-  hubspotUrl = 'https://meetings.hubspot.com/quantum-accounting' // Replace with your actual HubSpot meeting link
+  hubspotUrl = 'https://meetings-na3.hubspot.com/nischal'
 }) => {
   const location = useLocation();
+  const [showScheduler, setShowScheduler] = useState(false);
   
   const bannerStyle = backgroundImage
     ? { backgroundImage: `url(${backgroundImage})` }
     : {};
-
-  // Load HubSpot meetings embed script
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js';
-    script.async = true;
-    document.body.appendChild(script);
-    
-    return () => {
-      // Cleanup script on unmount if needed
-      const existingScript = document.querySelector('script[src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"]');
-      if (existingScript) {
-        existingScript.remove();
-      }
-    };
-  }, []);
-
-  const handleScheduleClick = () => {
-    // Open HubSpot meeting scheduler in a popup window (70% of screen size)
-    const width = Math.round(window.screen.width * 0.7);
-    const height = Math.round(window.screen.height * 0.75);
-    const left = Math.round((window.screen.width - width) / 2);
-    const top = Math.round((window.screen.height - height) / 2);
-    
-    window.open(
-      hubspotUrl,
-      'HubSpot Meeting Scheduler',
-      `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes,toolbar=no,menubar=no,location=no,status=no`
-    );
-  };
 
   return (
     <>
@@ -52,7 +23,7 @@ const PageBanner = ({
               <h1>{title}</h1>
               <div className="page-banner-buttons">
                 <button
-                  onClick={handleScheduleClick}
+                  onClick={() => setShowScheduler(true)}
                   className="btn btn-primary"
                 >
                   Schedule Consultation
@@ -66,6 +37,74 @@ const PageBanner = ({
         </div>
       </section>
       <Breadcrumb currentTitle={title} />
+
+      {/* HubSpot Scheduler Modal */}
+      {showScheduler && (
+        <div 
+          className="scheduler-modal-overlay"
+          onClick={() => setShowScheduler(false)}
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 9999,
+          }}
+        >
+          <div 
+            className="scheduler-modal"
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              backgroundColor: '#fff',
+              borderRadius: '12px',
+              width: '90%',
+              maxWidth: '550px',
+              height: '85vh',
+              maxHeight: '700px',
+              position: 'relative',
+              boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
+              overflow: 'hidden',
+            }}
+          >
+            <button
+              onClick={() => setShowScheduler(false)}
+              style={{
+                position: 'absolute',
+                top: '10px',
+                right: '10px',
+                background: '#333',
+                color: '#fff',
+                border: 'none',
+                borderRadius: '50%',
+                width: '32px',
+                height: '32px',
+                fontSize: '18px',
+                cursor: 'pointer',
+                zIndex: 10,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              ×
+            </button>
+            <iframe
+              src={`${hubspotUrl}?embed=true`}
+              title="Schedule a Meeting"
+              style={{
+                width: '100%',
+                height: '100%',
+                border: 'none',
+              }}
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 };

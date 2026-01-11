@@ -40,18 +40,22 @@ const BookMeeting = ({ backgroundImage = '' }) => {
             <div
               style={{
                 background: 'var(--bg-light)',
-                padding: '3rem',
+                padding: '1.5rem',
                 borderRadius: '8px',
-                textAlign: 'center',
                 margin: '2rem 0',
+                minHeight: '650px',
               }}
             >
-              <p style={{ color: 'var(--text-light)', marginBottom: '1rem' }}>
-                [Online Scheduling Widget Would Be Integrated Here]
-              </p>
-              <p>
-                For immediate assistance, call us at <strong>(555) 123-4567</strong>
-              </p>
+              <iframe
+                src="https://meetings-na3.hubspot.com/nischal?embed=true"
+                title="Schedule a Meeting"
+                style={{
+                  width: '100%',
+                  height: '630px',
+                  border: 'none',
+                  borderRadius: '8px',
+                }}
+              />
             </div>
 
             <h3>Prefer to Call?</h3>

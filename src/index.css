@@ -340,7 +340,7 @@ nav {
 }
 
 .breadcrumb-separator {
-  color: var(--text-light);
+  color: var(--text-dark);
   margin: 0 0.5rem;
   font-weight: 600;
 }
@@ -607,7 +607,7 @@ button.btn-primary {
 
 .section-subtitle {
   font-size: 1.1rem;
-  color: var(--text-light);
+  color: var(--text-dark);
   text-align: center;
   margin-bottom: 3rem;
   max-width: 800px;
@@ -677,6 +677,7 @@ button.btn-primary {
   font-style: italic;
   font-weight: 500;
   margin: 0;
+  text-shadow: 0 0 1px rgba(0,0,0,0.1);
 }
 
 .service-card {
@@ -717,6 +718,11 @@ button.btn-primary {
   margin-bottom: 1rem;
 }
 
+.service-card p {
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
 .service-card ul {
   list-style: none;
   margin: 1rem 0;
@@ -727,6 +733,7 @@ button.btn-primary {
   padding: 0.5rem 0;
   padding-left: 1.5rem;
   position: relative;
+  color: var(--text-dark);
 }
 
 .service-card ul li:before {
@@ -764,6 +771,22 @@ button.btn-primary {
   margin-bottom: 1rem;
 }
 
+.sidebar p {
+  color: var(--text-dark);
+  margin-bottom: 0.75rem;
+}
+
+.sidebar a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.sidebar a:hover {
+  color: var(--secondary-cyan);
+  text-decoration: underline;
+}
+
 /* Forms */
 .form-group {
   margin-bottom: 1.5rem;
@@ -773,7 +796,7 @@ button.btn-primary {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
-  color: var(--text-dark);
+  color: var(--primary-navy);
 }
 
 .form-group input,
@@ -785,6 +808,8 @@ button.btn-primary {
   border-radius: 5px;
   font-size: 1rem;
   font-family: inherit;
+  color: var(--text-dark);
+  background-color: var(--white);
 }
 
 .form-group input:focus,
@@ -835,7 +860,7 @@ button.btn-primary {
 }
 
 .trust-item p {
-  color: var(--text-light);
+  color: var(--text-dark);
   line-height: 1.6;
 }
 

@@ -6,7 +6,7 @@ const Sidebar = ({ showBooking = true, showContact = true, relatedPages = [] }) 
       {showBooking && (
         <>
           <h3>Get Started Today</h3>
-          <p>Schedule a consultation to discuss your needs.</p>
+          <p style={{ color: 'var(--text-dark)' }}>Schedule a consultation to discuss your needs.</p>
           <Link
             to="/book-meeting"
             className="btn btn-primary"
@@ -20,9 +20,9 @@ const Sidebar = ({ showBooking = true, showContact = true, relatedPages = [] }) 
       {showContact && (
         <>
           <h3>Contact Us</h3>
-          <p><a href="tel:+15551234567" style={{ color: 'inherit' }}><strong>Phone:</strong> (555) 123-4567</a></p>
-          <p><a href="mailto:info@quantumadvisory.com" style={{ color: 'inherit' }}><strong>Email:</strong> info@quantumadvisory.com</a></p>
-          <p>
+          <p style={{ color: 'var(--text-dark)' }}><a href="tel:+15551234567" style={{ color: 'var(--primary-blue)' }}><strong>Phone:</strong> (555) 123-4567</a></p>
+          <p style={{ color: 'var(--text-dark)' }}><a href="mailto:info@quantumadvisory.com" style={{ color: 'var(--primary-blue)' }}><strong>Email:</strong> info@quantumadvisory.com</a></p>
+          <p style={{ color: 'var(--text-dark)' }}>
             <strong>Office Hours:</strong><br />
             Monday - Friday: 9:00 AM - 6:00 PM<br />
             Saturday: By Appointment
@@ -36,7 +36,7 @@ const Sidebar = ({ showBooking = true, showContact = true, relatedPages = [] }) 
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {relatedPages.map((page) => (
               <li key={page.path} style={{ margin: '0.5rem 0' }}>
-                <Link to={page.path}>{page.label}</Link>
+                <Link to={page.path} style={{ color: 'var(--primary-blue)', textDecoration: 'none' }}>{page.label}</Link>
               </li>
             ))}
           </ul>

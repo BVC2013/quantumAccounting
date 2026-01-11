@@ -138,7 +138,7 @@ const IrsForms = () => {
             </p>
 
             <div style={{ 
-              backgroundColor: 'var(--off-white)', 
+              backgroundColor: 'var(--neutral-offwhite)', 
               padding: '1.5rem', 
               borderRadius: '8px', 
               marginBottom: '2rem',
@@ -180,7 +180,7 @@ const IrsForms = () => {
                   <tbody>
                     {category.forms.map((form, i) => (
                       <tr key={i} style={{ 
-                        backgroundColor: i % 2 === 0 ? 'var(--white)' : 'var(--off-white)',
+                        backgroundColor: i % 2 === 0 ? 'var(--white)' : 'var(--neutral-offwhite)',
                         borderBottom: '1px solid #e0e0e0'
                       }}>
                         <td style={{ padding: '0.75rem', fontWeight: 'bold' }}>
@@ -256,8 +256,8 @@ const IrsForms = () => {
               marginTop: '3rem',
               textAlign: 'center'
             }}>
-              <h3 style={{ marginTop: 0 }}>Need Professional Tax Assistance?</h3>
-              <p>
+              <h3 style={{ marginTop: 0, color: 'var(--white)' }}>Need Professional Tax Assistance?</h3>
+              <p style={{ color: 'var(--white)' }}>
                 Don't navigate complex tax forms alone. Our experienced CPAs can ensure 
                 accurate filing and help you maximize your tax savings.
               </p>
