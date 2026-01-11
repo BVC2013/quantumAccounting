@@ -23,13 +23,13 @@ const Contact = ({ backgroundImage = '' }) => {
 
             <h3>Contact Information</h3>
             <p>
-              <strong>Phone:</strong> (555) 123-4567
+              <strong>Phone:</strong> <a href="tel:+15551234567">(555) 123-4567</a>
               <br />
-              <strong>Email:</strong> info@quantumaccounting.com
+              <strong>Email:</strong> <a href="mailto:info@quantumadvisory.com">info@quantumadvisory.com</a>
               <br />
-              <strong>Address:</strong> [Your Business Address]
+              <strong>Address:</strong> 123 Financial Plaza, Suite 400
               <br />
-              [City, State ZIP]
+              Houston, TX 77002
             </p>
 
             <h3>Office Hours</h3>
@@ -51,7 +51,7 @@ const Contact = ({ backgroundImage = '' }) => {
             <Link
               to="/book-meeting"
               className="btn btn-primary"
-              style={{ width: '100%', marginBottom: '1rem', display: 'block', textAlign: 'center' }}
+              style={{ width: '100%', marginBottom: '1rem', display: 'block', textAlign: 'center', color: '#ffffff' }}
             >
               Book a Meeting
             </Link>
@@ -64,7 +64,7 @@ const Contact = ({ backgroundImage = '' }) => {
             <Link
               to="/client-portal"
               className="btn btn-secondary"
-              style={{ width: '100%', display: 'block', textAlign: 'center', color: 'var(--primary-color)', border: '2px solid var(--primary-color)' }}
+              style={{ width: '100%', display: 'block', textAlign: 'center', color: 'var(--primary-navy)', border: '2px solid var(--primary-navy)' }}
             >
               Client Portal Login
             </Link>

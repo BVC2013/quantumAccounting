@@ -496,13 +496,20 @@ nav {
 
 .btn-primary {
   background: linear-gradient(135deg, var(--secondary-cyan) 0%, var(--primary-blue) 100%);
-  color: var(--white);
+  color: var(--white) !important;
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(11, 47, 74, 0.25);
   background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-navy) 100%);
+  color: var(--white) !important;
+}
+
+/* Calendly button override */
+.page-banner-buttons .btn-primary,
+button.btn-primary {
+  color: #ffffff !important;
 }
 
 .btn-secondary {

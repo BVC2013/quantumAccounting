@@ -55,9 +55,9 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Contact Us</h3>
             <ul>
-              <li><strong>Phone:</strong> (555) 123-4567</li>
-              <li><strong>Email:</strong> info@quantumaccounting.com</li>
-              <li><strong>Hours:</strong> Mon-Fri 9AM-6PM</li>
+              <li><a href="tel:+15551234567">(555) 123-4567</a></li>
+              <li><a href="mailto:info@quantumadvisory.com">info@quantumadvisory.com</a></li>
+              <li>Mon-Fri 9AM-6PM</li>
               <li><Link to="/contact">Send a Message</Link></li>
               <li><Link to="/book-meeting">Book a Consultation</Link></li>
             </ul>

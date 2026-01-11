@@ -8,18 +8,53 @@ const ContactForm = ({ buttonText = 'Send Message' }) => {
     subject: '',
     message: '',
   });
+  const [status, setStatus] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+    setStatus('sending');
+    
+    // Option 1: Use Formspree (replace YOUR_FORM_ID with your actual Formspree form ID)
+    // Sign up at formspree.io and create a form to get your ID
+    try {
+      const response = await fetch('https://formspree.io/f/mbddrwpn', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+      
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+      } else {
+        // Fallback to mailto if Formspree fails
+        const mailtoLink = `mailto:info@quantumadvisory.com?subject=${encodeURIComponent(formData.subject || 'Contact Form Inquiry')}&body=${encodeURIComponent(
+          `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
+        )}`;
+        window.location.href = mailtoLink;
+        setStatus('');
+      }
+    } catch (error) {
+      // Fallback to mailto if fetch fails
+      const mailtoLink = `mailto:info@quantumadvisory.com?subject=${encodeURIComponent(formData.subject || 'Contact Form Inquiry')}&body=${encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
+      )}`;
+      window.location.href = mailtoLink;
+      setStatus('');
+    }
   };
 
   return (
@@ -77,9 +112,14 @@ const ContactForm = ({ buttonText = 'Send Message' }) => {
           required
         />
       </div>
-      <button type="submit" className="btn btn-primary">
-        {buttonText}
+      <button type="submit" className="btn btn-primary" disabled={status === 'sending'}>
+        {status === 'sending' ? 'Sending...' : buttonText}
       </button>
+      {status === 'success' && (
+        <p style={{ color: 'var(--success-color)', marginTop: '1rem', fontWeight: '600' }}>
+          ✓ Thank you for your message! We will get back to you within 24 hours.
+        </p>
+      )}
     </form>
   );
 };
