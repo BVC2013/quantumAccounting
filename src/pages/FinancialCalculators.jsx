@@ -13,6 +13,7 @@ const FinancialCalculators = () => {
   const [iframeHeight, setIframeHeight] = useState(450);
   const [iframeScale, setIframeScale] = useState(1.5);
   const containerRef = useRef(null);
+  const calculatorDisplayRef = useRef(null);
 
   // Adjust iframe scale and height based on container width
   useEffect(() => {
@@ -177,7 +178,12 @@ const FinancialCalculators = () => {
 
   const handleCalculatorSelect = (calc) => {
     setActiveCalculator(calc);
-    window.scrollTo({ top: 350, behavior: 'smooth' });
+    // Scroll to the calculator display after a short delay to allow render
+    setTimeout(() => {
+      if (calculatorDisplayRef.current) {
+        calculatorDisplayRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
   };
 
   return (
@@ -273,13 +279,14 @@ const FinancialCalculators = () => {
 
             {/* Active Calculator Display */}
             <div 
-              ref={containerRef}
+              ref={(el) => { containerRef.current = el; calculatorDisplayRef.current = el; }}
               style={{
                 backgroundColor: 'var(--white)',
                 borderRadius: '8px',
                 boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
                 overflow: 'hidden',
-                marginBottom: '2rem'
+                marginBottom: '2rem',
+                scrollMarginTop: '20px'
               }}
             >
               <div style={{
