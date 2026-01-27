@@ -77,36 +77,38 @@ const pageData = {
     ],
   },
   taxRelief: {
-    title: 'Tax Relief Services',
+    title: 'Tax Relief & Audit Support',
     description: "Facing IRS issues? We're here to help you resolve tax problems and get back on track.",
     backgroundImage: bannerLaptopNotes,
     sections: [
-      { title: 'IRS Audit Support', content: 'An IRS audit notice can be stressful, but you don\'t have to face it alone. We represent you before the IRS, handle all communications, prepare documentation, and work to achieve the best possible outcome. Our experience with IRS procedures protects your rights and minimizes additional liability.' },
-      { title: 'Back Taxes', content: 'If you have unfiled returns or unpaid taxes, the situation won\'t improve on its own—but it can get better. We help you get back into compliance by preparing past-due returns and negotiating with the IRS to resolve your balance. The sooner you act, the more options you have.' },
-      { title: 'Payment Plans', content: 'Can\'t pay your full tax bill? The IRS offers installment agreements that let you pay over time. We negotiate terms you can afford, help you gather required documentation, and set up arrangements that protect you from further collection action.' },
-      { title: 'Offer in Compromise', content: 'In some cases, the IRS will accept less than the full amount owed. An Offer in Compromise requires proving you can\'t pay the full balance. We evaluate your eligibility, prepare your application, and negotiate with the IRS to settle your debt for the lowest amount possible.' },
-      { title: 'Liens & Levies', content: 'IRS liens damage your credit and levies can seize your wages and bank accounts. We work quickly to release or prevent these actions, negotiating with the IRS to find alternatives that resolve your debt without devastating your finances.' },
+      { title: 'IRS Audit Representation', content: 'An IRS audit notice can be stressful, but you don\'t have to face it alone. We represent you before the IRS, handle all communications, prepare documentation, and work to achieve the best possible outcome. Our experience with IRS procedures protects your rights and minimizes additional liability.' },
+      { title: 'Tax Debt Resolution', content: 'If you have unpaid taxes, the situation won\'t improve on its own—but it can get better. We help you resolve your tax balance through installment agreements, offers in compromise, or other relief programs. The sooner you act, the more options you have.' },
+      { title: 'Penalty Abatement', content: 'IRS penalties can significantly increase your tax debt. We evaluate your situation to determine if you qualify for penalty abatement based on reasonable cause, first-time penalty relief, or other available programs.' },
+      { title: 'Audit Defense', content: 'When the IRS questions your return, you need experienced representation. We gather supporting documentation, prepare your case, and communicate directly with IRS agents to protect your interests throughout the examination process.' },
+      { title: 'IRS Appeals', content: 'If you disagree with an IRS determination, you have the right to appeal. We help you navigate the appeals process, present your case effectively, and work toward a fair resolution of your tax dispute.' },
     ],
     relatedPages: [
-      { label: 'IRS Audit Support', path: '/irs-audit-support' },
-      { label: 'Back Taxes', path: '/back-taxes' },
-      { label: 'Payment Plans', path: '/payment-plans' },
+      { label: 'IRS Audit Representation', path: '/irs-audit-representation' },
+      { label: 'Tax Debt Resolution', path: '/tax-debt-resolution' },
+      { label: 'Penalty Abatement', path: '/penalty-abatement' },
     ],
   },
-  quickbooksServices: {
-    title: 'QuickBooks Services',
-    description: 'Expert QuickBooks setup, training, and support to streamline your accounting.',
+  itServices: {
+    title: 'IT Services',
+    description: 'Comprehensive IT solutions to support and grow your business.',
     backgroundImage: bannerMacbook,
     sections: [
-      { title: 'Why QuickBooks?', content: 'QuickBooks is the #1 accounting software for small businesses, used by over 7 million companies. It streamlines invoicing, expense tracking, payroll, and financial reporting. As certified QuickBooks ProAdvisors, we help you leverage its full potential to save time, reduce errors, and gain better visibility into your business finances.' },
-      { title: 'Setup & Configuration', content: 'A properly configured QuickBooks file is essential for accurate reporting. We set up your chart of accounts, connect bank feeds, configure sales tax, establish customer and vendor lists, and customize settings for your industry. Start right from day one and avoid costly cleanup later.' },
-      { title: 'Training', content: 'Learn to use QuickBooks with confidence. Our hands-on training covers daily transactions, bank reconciliation, invoicing, reporting, and more. We customize training to your role—whether you\'re a business owner who needs the big picture or a bookkeeper handling daily entries.' },
-      { title: 'Tune-Up Services', content: 'If your QuickBooks file has errors, duplicate entries, or hasn\'t been reconciled in months, we can help. Our tune-up service cleans up your data, corrects mistakes, reconciles accounts, and gets your books back to a reliable state. We also identify process improvements to prevent future issues.' },
+      { title: 'Network Setup & Support', content: 'We design, implement, and maintain robust network infrastructure tailored to your business needs. From small office setups to enterprise solutions, we ensure your network is secure, reliable, and optimized for performance.' },
+      { title: 'Cloud Solutions', content: 'Leverage the power of cloud computing for increased flexibility, scalability, and cost savings. We help you migrate to cloud platforms, set up cloud-based applications, and manage your cloud infrastructure effectively.' },
+      { title: 'Cybersecurity', content: 'Protect your business from cyber threats with comprehensive security solutions. We implement firewalls, antivirus protection, intrusion detection, and security protocols to safeguard your data and systems.' },
+      { title: 'Data Backup & Recovery', content: 'Never lose critical business data with our backup and disaster recovery solutions. We implement automated backup systems and create recovery plans to ensure business continuity in any situation.' },
+      { title: 'IT Consulting', content: 'Get expert guidance on technology decisions that impact your business. Our IT consultants help you plan technology investments, optimize existing systems, and align IT with your business goals.' },
+      { title: 'Software Integration', content: 'Streamline your operations by integrating your business software systems. We connect accounting, CRM, inventory, and other applications to eliminate data silos and improve efficiency.' },
     ],
     relatedPages: [
-      { label: 'QuickBooks Setup', path: '/quickbooks-setup' },
-      { label: 'QuickBooks Training', path: '/quickbooks-training' },
-      { label: 'QuickBooks Tune-Up', path: '/quickbooks-tuneup' },
+      { label: 'Network Setup', path: '/network-setup' },
+      { label: 'Cloud Solutions', path: '/cloud-solutions' },
+      { label: 'Cybersecurity', path: '/cybersecurity' },
     ],
   },
   industries: {
@@ -180,23 +182,20 @@ const simplePages = {
   taxPreparationIndividual: { title: 'Individual Tax Preparation', description: 'Professional preparation of your personal tax returns.', backgroundImage: bannerLaptopNotes },
   taxPreparationBusiness: { title: 'Business Tax Preparation', description: 'Expert preparation of business tax returns for all entity types.', backgroundImage: bannerLaptopNotes },
   taxPlanning: { title: 'Tax Planning', description: 'Year-round strategies to minimize your tax liability.', backgroundImage: bannerPlanning },
-  estateTrustTax: { title: 'Estate & Trust Tax Services', description: 'Specialized tax services for estates and trusts.', backgroundImage: bannerPlanning },
-  cryptocurrencyAccounting: { title: 'Cryptocurrency Accounting', description: 'Tax guidance for cryptocurrency transactions and investments.', backgroundImage: bannerMacbook },
-  irsAuditSupport: { title: 'IRS Audit Support', description: 'Professional representation during IRS examinations.', backgroundImage: bannerLaptopNotes },
-  unfiledReturns: { title: 'Unfiled Tax Returns', description: 'Help filing past-due tax returns and getting back into compliance.', backgroundImage: bannerLaptopNotes },
-  backTaxes: { title: 'Back Taxes', description: 'Resolution strategies for unpaid tax balances.', backgroundImage: bannerLaptopNotes },
-  payrollTaxIssues: { title: 'Payroll Tax Issues', description: 'Resolution of payroll tax problems and penalties.', backgroundImage: bannerLaptopNotes },
-  liensLevies: { title: 'Liens & Levies', description: 'Help removing or reducing IRS liens and levies.', backgroundImage: bannerLaptopNotes },
-  wageGarnishment: { title: 'Wage Garnishment', description: 'Stop or reduce IRS wage garnishments.', backgroundImage: bannerLaptopNotes },
-  irsSeizures: { title: 'IRS Seizures', description: 'Protect your property from IRS seizure actions.', backgroundImage: bannerLaptopNotes },
-  paymentPlans: { title: 'Payment Plans', description: 'Negotiate affordable installment agreements with the IRS.', backgroundImage: bannerLaptopNotes },
-  offerInCompromise: { title: 'Offer in Compromise', description: 'Settle your tax debt for less than you owe.', backgroundImage: bannerLaptopNotes },
-  bankruptcyOptions: { title: 'Bankruptcy Options', description: 'Understanding how bankruptcy affects tax debt.', backgroundImage: bannerLaptopNotes },
-  innocentSpouseRelief: { title: 'Innocent Spouse Relief', description: "Relief from your spouse's tax liability.", backgroundImage: bannerReviewing },
-  whyQuickbooks: { title: 'Why QuickBooks', description: 'Discover why QuickBooks is the right choice for your business.', backgroundImage: bannerMacbook },
-  quickbooksSetup: { title: 'QuickBooks Setup', description: 'Professional QuickBooks configuration for your business.', backgroundImage: bannerMacbook },
-  quickbooksTraining: { title: 'QuickBooks Training', description: 'Learn to use QuickBooks effectively with our training.', backgroundImage: bannerMacbook },
-  quickbooksTuneup: { title: 'QuickBooks Tune-Up', description: 'Clean up and optimize your QuickBooks file.', backgroundImage: bannerMacbook },
+  // Tax Relief & Audit Support pages
+  irsAuditRepresentation: { title: 'IRS Audit Representation', description: 'Professional representation during IRS examinations.', backgroundImage: bannerLaptopNotes },
+  taxDebtResolution: { title: 'Tax Debt Resolution', description: 'Strategies to resolve unpaid tax balances with the IRS.', backgroundImage: bannerLaptopNotes },
+  penaltyAbatement: { title: 'Penalty Abatement', description: 'Help reducing or eliminating IRS penalties.', backgroundImage: bannerLaptopNotes },
+  auditDefense: { title: 'Audit Defense', description: 'Comprehensive defense services for IRS audits.', backgroundImage: bannerLaptopNotes },
+  irsAppeals: { title: 'IRS Appeals', description: 'Navigate the IRS appeals process effectively.', backgroundImage: bannerLaptopNotes },
+  // IT Services pages
+  networkSetup: { title: 'Network Setup & Support', description: 'Design and maintain robust network infrastructure for your business.', backgroundImage: bannerMacbook },
+  cloudSolutions: { title: 'Cloud Solutions', description: 'Leverage cloud computing for flexibility and scalability.', backgroundImage: bannerMacbook },
+  cybersecurity: { title: 'Cybersecurity', description: 'Protect your business from cyber threats with comprehensive security.', backgroundImage: bannerSecurity },
+  dataBackup: { title: 'Data Backup & Recovery', description: 'Never lose critical data with automated backup solutions.', backgroundImage: bannerMacbook },
+  itConsulting: { title: 'IT Consulting', description: 'Expert guidance on technology decisions for your business.', backgroundImage: bannerMacbook },
+  softwareIntegration: { title: 'Software Integration', description: 'Connect your business systems for improved efficiency.', backgroundImage: bannerMacbook },
+  // Industry pages
   construction: { title: 'Construction Industry', description: 'Specialized accounting for contractors and builders.', backgroundImage: bannerTechMeeting },
   restaurants: { title: 'Restaurants', description: 'Specialized accounting for restaurants and food service.', backgroundImage: bannerTechMeeting },
   retail: { title: 'Retail', description: 'Accounting solutions for retail businesses.', backgroundImage: bannerTechMeeting },
@@ -213,10 +212,7 @@ const simplePages = {
   recordRetention: { title: 'Record Retention Guide', description: 'How long to keep your financial records.', backgroundImage: bannerDesk },
   stateTaxForms: { title: 'State Tax Forms', description: 'Links to state tax agency forms.', backgroundImage: bannerDesk },
   newsletter: { title: 'Newsletter', description: 'Subscribe to our financial newsletter.', backgroundImage: bannerDesk },
-  financialGuides: { title: 'Financial Guides', description: 'Helpful guides on financial topics.', backgroundImage: bannerDesk },
-  lifeEvents: { title: 'Life Events', description: 'Financial guidance for major life changes.', backgroundImage: bannerReviewing },
   businessStrategies: { title: 'Business Strategies', description: 'Strategies for business success.', backgroundImage: bannerPlanning },
-  investmentStrategies: { title: 'Investment Strategies', description: 'Guidance on investment planning.', backgroundImage: bannerPlanning },
   faq: { title: 'Frequently Asked Questions', description: 'Answers to common questions.', backgroundImage: bannerFeedback },
   financialCalculators: { title: 'Financial Calculators', description: 'Interactive financial planning tools.', backgroundImage: bannerMacbook },
   clientPortal: { title: 'Client Portal', description: 'Secure access for existing clients.', backgroundImage: bannerSecurity },
@@ -225,7 +221,6 @@ const simplePages = {
   privacyPolicy: { title: 'Privacy Policy', description: 'How we protect your information.', backgroundImage: bannerSecurity },
   disclaimer: { title: 'Disclaimer', description: 'Important legal information.', backgroundImage: bannerDesk },
   securityMeasures: { title: 'Security Measures', description: 'How we keep your data secure.', backgroundImage: bannerSecurity },
-  sitemap: { title: 'Sitemap', description: 'Complete list of pages on our website.', backgroundImage: bannerDesk },
   taxStrategiesIndividual: { title: 'Tax Strategies for Individuals', description: 'Smart tax strategies to minimize your personal tax burden.', backgroundImage: bannerReviewing },
   taxStrategiesBusiness: { title: 'Tax Strategies for Business', description: 'Business tax strategies to maximize savings and efficiency.', backgroundImage: bannerPlanning },
   irsRecordRetrieval: { title: 'IRS Record Retrieval', description: 'Get copies of your past tax records from the IRS.', backgroundImage: bannerDesk },
@@ -250,7 +245,7 @@ function App() {
           <Route path="/services-individuals" element={<GenericPage {...pageData.servicesIndividuals} />} />
           <Route path="/services-business" element={<GenericPage {...pageData.servicesBusiness} />} />
           <Route path="/tax-relief" element={<GenericPage {...pageData.taxRelief} />} />
-          <Route path="/quickbooks-services" element={<GenericPage {...pageData.quickbooksServices} />} />
+          <Route path="/it-services" element={<GenericPage {...pageData.itServices} />} />
           <Route path="/industries" element={<GenericPage {...pageData.industries} />} />
           <Route path="/tax-center" element={<GenericPage {...pageData.taxCenter} />} />
           <Route path="/resources" element={<GenericPage {...pageData.resources} />} />
@@ -271,23 +266,20 @@ function App() {
           <Route path="/tax-preparation-individual" element={<GenericPage {...simplePages.taxPreparationIndividual} />} />
           <Route path="/tax-preparation-business" element={<GenericPage {...simplePages.taxPreparationBusiness} />} />
           <Route path="/tax-planning" element={<GenericPage {...simplePages.taxPlanning} />} />
-          <Route path="/estate-trust-tax" element={<GenericPage {...simplePages.estateTrustTax} />} />
-          <Route path="/cryptocurrency-accounting" element={<GenericPage {...simplePages.cryptocurrencyAccounting} />} />
-          <Route path="/irs-audit-support" element={<GenericPage {...simplePages.irsAuditSupport} />} />
-          <Route path="/unfiled-returns" element={<GenericPage {...simplePages.unfiledReturns} />} />
-          <Route path="/back-taxes" element={<GenericPage {...simplePages.backTaxes} />} />
-          <Route path="/payroll-tax-issues" element={<GenericPage {...simplePages.payrollTaxIssues} />} />
-          <Route path="/liens-levies" element={<GenericPage {...simplePages.liensLevies} />} />
-          <Route path="/wage-garnishment" element={<GenericPage {...simplePages.wageGarnishment} />} />
-          <Route path="/irs-seizures" element={<GenericPage {...simplePages.irsSeizures} />} />
-          <Route path="/payment-plans" element={<GenericPage {...simplePages.paymentPlans} />} />
-          <Route path="/offer-in-compromise" element={<GenericPage {...simplePages.offerInCompromise} />} />
-          <Route path="/bankruptcy-options" element={<GenericPage {...simplePages.bankruptcyOptions} />} />
-          <Route path="/innocent-spouse-relief" element={<GenericPage {...simplePages.innocentSpouseRelief} />} />
-          <Route path="/why-quickbooks" element={<GenericPage {...simplePages.whyQuickbooks} />} />
-          <Route path="/quickbooks-setup" element={<GenericPage {...simplePages.quickbooksSetup} />} />
-          <Route path="/quickbooks-training" element={<GenericPage {...simplePages.quickbooksTraining} />} />
-          <Route path="/quickbooks-tuneup" element={<GenericPage {...simplePages.quickbooksTuneup} />} />
+          {/* Tax Relief & Audit Support pages */}
+          <Route path="/irs-audit-representation" element={<GenericPage {...simplePages.irsAuditRepresentation} />} />
+          <Route path="/tax-debt-resolution" element={<GenericPage {...simplePages.taxDebtResolution} />} />
+          <Route path="/penalty-abatement" element={<GenericPage {...simplePages.penaltyAbatement} />} />
+          <Route path="/audit-defense" element={<GenericPage {...simplePages.auditDefense} />} />
+          <Route path="/irs-appeals" element={<GenericPage {...simplePages.irsAppeals} />} />
+          {/* IT Services pages */}
+          <Route path="/network-setup" element={<GenericPage {...simplePages.networkSetup} />} />
+          <Route path="/cloud-solutions" element={<GenericPage {...simplePages.cloudSolutions} />} />
+          <Route path="/cybersecurity" element={<GenericPage {...simplePages.cybersecurity} />} />
+          <Route path="/data-backup" element={<GenericPage {...simplePages.dataBackup} />} />
+          <Route path="/it-consulting" element={<GenericPage {...simplePages.itConsulting} />} />
+          <Route path="/software-integration" element={<GenericPage {...simplePages.softwareIntegration} />} />
+          {/* Industry pages */}
           <Route path="/construction" element={<GenericPage {...simplePages.construction} />} />
           <Route path="/restaurants" element={<GenericPage {...simplePages.restaurants} />} />
           <Route path="/retail" element={<GenericPage {...simplePages.retail} />} />
@@ -304,10 +296,7 @@ function App() {
           <Route path="/record-retention" element={<GenericPage {...simplePages.recordRetention} />} />
           <Route path="/state-tax-forms" element={<GenericPage {...simplePages.stateTaxForms} />} />
           <Route path="/newsletter" element={<GenericPage {...simplePages.newsletter} />} />
-          <Route path="/financial-guides" element={<GenericPage {...simplePages.financialGuides} />} />
-          <Route path="/life-events" element={<GenericPage {...simplePages.lifeEvents} />} />
           <Route path="/business-strategies" element={<GenericPage {...simplePages.businessStrategies} />} />
-          <Route path="/investment-strategies" element={<GenericPage {...simplePages.investmentStrategies} />} />
           <Route path="/faq" element={<GenericPage {...simplePages.faq} />} />
           <Route path="/financial-calculators" element={<FinancialCalculators />} />
           <Route path="/client-portal" element={<GenericPage {...simplePages.clientPortal} />} />
@@ -316,7 +305,6 @@ function App() {
           <Route path="/privacy-policy" element={<GenericPage {...simplePages.privacyPolicy} />} />
           <Route path="/disclaimer" element={<GenericPage {...simplePages.disclaimer} />} />
           <Route path="/security-measures" element={<GenericPage {...simplePages.securityMeasures} />} />
-          <Route path="/sitemap" element={<GenericPage {...simplePages.sitemap} />} />
           <Route path="/tax-strategies-individual" element={<GenericPage {...simplePages.taxStrategiesIndividual} />} />
           <Route path="/tax-strategies-business" element={<GenericPage {...simplePages.taxStrategiesBusiness} />} />
           <Route path="/irs-record-retrieval" element={<GenericPage {...simplePages.irsRecordRetrieval} />} />

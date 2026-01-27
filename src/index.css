@@ -352,12 +352,9 @@ nav {
 
 /* Page Banner */
 .page-banner {
-  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-blue) 100%);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: var(--primary-navy);
   position: relative;
-  min-height: 400px;
+  min-height: 320px;
   display: flex;
   align-items: center;
 }
@@ -368,7 +365,7 @@ nav {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(11, 47, 74, 0.65) 0%, rgba(30, 111, 168, 0.55) 100%);
+  background: linear-gradient(135deg, var(--primary-navy) 0%, rgba(11, 47, 74, 0.95) 100%);
   display: flex;
   align-items: center;
 }
@@ -380,16 +377,16 @@ nav {
 }
 
 .page-banner-card {
-  background: rgba(11, 47, 74, 0.35);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(30, 111, 168, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   padding: 3rem 4rem;
-  max-width: 800px;
+  max-width: 850px;
   margin: 0 auto;
   text-align: center;
-  box-shadow: 0 8px 32px rgba(11, 47, 74, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   animation: fadeInUp 0.8s ease-out;
 }
 
@@ -406,18 +403,20 @@ nav {
 
 .page-banner-card h1 {
   color: var(--white);
-  font-size: 2.75rem;
-  margin-bottom: 1rem;
+  font-size: 3.25rem;
+  margin-bottom: 1.25rem;
   font-weight: 700;
-  line-height: 1.2;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  line-height: 1.15;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.5px;
 }
 
 .page-banner-card p {
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.4rem;
   margin-bottom: 2rem;
   line-height: 1.6;
+  font-weight: 400;
 }
 
 .page-banner-buttons {
@@ -1088,7 +1087,7 @@ footer {
   }
   
   .page-banner {
-    min-height: 350px;
+    min-height: 280px;
   }
   
   .page-banner-card {
@@ -1097,11 +1096,11 @@ footer {
   }
   
   .page-banner-card h1 {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
   
   .page-banner-card p {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
   }
   
   .page-banner-buttons {
