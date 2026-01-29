@@ -25,7 +25,7 @@ const Contact = ({ backgroundImage = '' }) => {
             <p>
               <strong>Phone:</strong> <a href="tel:+15551234567">(555) 123-4567</a>
               <br />
-              <strong>Email:</strong> <a href="mailto:info@quantumadvisory.com">info@quantumadvisory.com</a>
+              <strong>Email:</strong> <a href="mailto:hello@quantum-accountant.com">hello@quantum-accountant.com</a>
               <br />
               <strong>Address:</strong> 123 Financial Plaza, Suite 400
               <br />

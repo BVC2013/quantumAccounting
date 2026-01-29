@@ -41,7 +41,7 @@ const ContactForm = ({ buttonText = 'Send Message' }) => {
         setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
       } else {
         // Fallback to mailto if Formspree fails
-        const mailtoLink = `mailto:info@quantumadvisory.com?subject=${encodeURIComponent(formData.subject || 'Contact Form Inquiry')}&body=${encodeURIComponent(
+        const mailtoLink = `mailto:hello@quantum-accountant.com?subject=${encodeURIComponent(formData.subject || 'Contact Form Inquiry')}&body=${encodeURIComponent(
           `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
         )}`;
         window.location.href = mailtoLink;
@@ -49,7 +49,7 @@ const ContactForm = ({ buttonText = 'Send Message' }) => {
       }
     } catch (error) {
       // Fallback to mailto if fetch fails
-      const mailtoLink = `mailto:info@quantumadvisory.com?subject=${encodeURIComponent(formData.subject || 'Contact Form Inquiry')}&body=${encodeURIComponent(
+      const mailtoLink = `mailto:hello@quantum-accountant.com?subject=${encodeURIComponent(formData.subject || 'Contact Form Inquiry')}&body=${encodeURIComponent(
         `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
       )}`;
       window.location.href = mailtoLink;
