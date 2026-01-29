@@ -98,16 +98,6 @@ const Header = () => {
       ],
     },
     {
-      label: 'Tax Center',
-      path: '/tax-center',
-      dropdown: [
-        { label: 'Tax Center Overview', path: '/tax-center' },
-        { label: 'Tax Services', path: '/tax-services' },
-        { label: 'Record Retention Guide', path: '/record-retention' },
-        { label: 'IRS Record Retrieval', path: '/irs-record-retrieval' },
-      ],
-    },
-    {
       label: 'Resources',
       path: '/resources',
       dropdown: [
