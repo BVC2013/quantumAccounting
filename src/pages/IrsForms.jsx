@@ -144,8 +144,8 @@ const IrsForms = () => {
               marginBottom: '2rem',
               borderLeft: '4px solid var(--accent-gold)'
             }}>
-              <h3 style={{ marginTop: 0, color: 'var(--primary-navy)' }}>📋 Need Help With Your Tax Forms?</h3>
-              <p style={{ marginBottom: 0 }}>
+              <h3 style={{ marginTop: 0, color: '#000', fontSize: '1.5rem' }}>📋 Need Help With Your Tax Forms?</h3>
+              <p style={{ marginBottom: 0, color: '#000', fontSize: '1.05rem' }}>
                 Our experienced team can help you determine which forms you need, ensure accurate 
                 completion, and maximize your deductions and credits. <Link to="/contact">Contact us</Link> for 
                 professional assistance.
@@ -249,15 +249,16 @@ const IrsForms = () => {
             </div>
 
             <div style={{ 
-              backgroundColor: 'var(--primary-navy)', 
-              color: 'var(--white)', 
+              backgroundColor: 'var(--neutral-offwhite)', 
+              color: '#000', 
               padding: '2rem', 
               borderRadius: '8px', 
               marginTop: '3rem',
-              textAlign: 'center'
+              textAlign: 'center',
+              border: '1px solid var(--accent-gold)'
             }}>
-              <h3 style={{ marginTop: 0, color: 'var(--white)' }}>Need Professional Tax Assistance?</h3>
-              <p style={{ color: 'var(--white)' }}>
+              <h3 style={{ marginTop: 0, color: '#000', fontSize: '1.6rem' }}>Need Professional Tax Assistance?</h3>
+              <p style={{ color: '#000', fontSize: '1.05rem' }}>
                 Don't navigate complex tax forms alone. Our experienced CPAs can ensure 
                 accurate filing and help you maximize your tax savings.
               </p>

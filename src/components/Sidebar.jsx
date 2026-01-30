@@ -21,7 +21,7 @@ const Sidebar = ({ showBooking = true, showContact = true, relatedPages = [] }) 
         <>
           <h3>Contact Us</h3>
           <p style={{ color: 'var(--text-dark)' }}><a href="tel:+15551234567" style={{ color: 'var(--primary-blue)' }}><strong>Phone:</strong> (555) 123-4567</a></p>
-          <p style={{ color: 'var(--text-dark)' }}><a href="mailto:info@quantumadvisory.com" style={{ color: 'var(--primary-blue)' }}><strong>Email:</strong> info@quantumadvisory.com</a></p>
+          <p style={{ color: 'var(--text-dark)' }}><a href="mailto:hello@quantum-accountant.com" style={{ color: 'var(--primary-blue)' }}><strong>Email:</strong> hello@quantum-accountant.com</a></p>
           <p style={{ color: 'var(--text-dark)' }}>
             <strong>Office Hours:</strong><br />
             Monday - Friday: 9:00 AM - 6:00 PM<br />

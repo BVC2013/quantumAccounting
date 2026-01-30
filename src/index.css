@@ -672,23 +672,23 @@ button.btn-primary {
 }
 
 .pillar-card .pillar-why {
-  color: var(--accent-gold);
-  font-size: 0.9rem;
+  color: #000;
+  font-size: 1.05rem;
+  font-weight: 700;
   font-style: italic;
-  font-weight: 500;
   margin: 0;
-  text-shadow: 0 0 1px rgba(0,0,0,0.1);
 }
 
 .service-card {
-  background: var(--white);
-  border: 1px solid var(--border-color);
+  background: linear-gradient(180deg, var(--white) 0%, var(--neutral-offwhite) 100%);
+  border: 1px solid rgba(11, 47, 74, 0.08);
   border-radius: 12px;
   padding: 2.5rem;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
   animation: fadeInUp 0.6s ease-out;
+  box-shadow: 0 8px 18px rgba(11, 47, 74, 0.08);
 }
 
 .service-card::before {
@@ -708,9 +708,9 @@ button.btn-primary {
 }
 
 .service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(11, 47, 74, 0.18);
-  border-color: var(--secondary-cyan);
+  transform: translateY(-10px);
+  box-shadow: 0 18px 35px rgba(11, 47, 74, 0.22);
+  border-color: rgba(11, 47, 74, 0.35);
 }
 
 .service-card h3 {
@@ -718,9 +718,27 @@ button.btn-primary {
   margin-bottom: 1rem;
 }
 
+.service-card:hover h3 {
+  color: var(--primary-blue);
+}
+
 .service-card p {
   color: var(--text-dark);
   line-height: 1.7;
+}
+
+.service-card .btn-secondary {
+  background-color: var(--white);
+  color: var(--primary-navy);
+  border-color: rgba(11, 47, 74, 0.35);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.service-card:hover .btn-secondary {
+  background-color: var(--primary-navy);
+  color: var(--white);
+  box-shadow: 0 8px 18px rgba(11, 47, 74, 0.25);
+  border-color: var(--primary-navy);
 }
 
 .service-card ul {

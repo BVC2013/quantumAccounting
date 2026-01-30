@@ -6,6 +6,12 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import TaxServices from './pages/TaxServices';
+import ServicesIndividuals from './pages/ServicesIndividuals';
+import ServicesBusiness from './pages/ServicesBusiness';
+import TaxReliefOverview from './pages/TaxReliefOverview';
+import ItServicesOverview from './pages/ItServicesOverview';
+import IndustriesOverview from './pages/IndustriesOverview';
+import ResourcesOverview from './pages/ResourcesOverview';
 import Contact from './pages/Contact';
 import BookMeeting from './pages/BookMeeting';
 import GenericPage from './pages/GenericPage';
@@ -247,13 +253,14 @@ function App() {
           
           {/* Pages with detailed content */}
           <Route path="/our-values" element={<GenericPage {...pageData.ourValues} />} />
-          <Route path="/services-individuals" element={<GenericPage {...pageData.servicesIndividuals} />} />
-          <Route path="/services-business" element={<GenericPage {...pageData.servicesBusiness} />} />
-          <Route path="/tax-relief" element={<GenericPage {...pageData.taxRelief} />} />
+          <Route path="/services-individuals" element={<ServicesIndividuals backgroundImage={bannerReviewing} />} />
+          <Route path="/services-business" element={<ServicesBusiness backgroundImage={bannerTeamMeeting} />} />
+          <Route path="/tax-relief" element={<TaxReliefOverview backgroundImage={bannerLaptopNotes} />} />
+          <Route path="/it-services" element={<ItServicesOverview backgroundImage={bannerMacbook} />} />
           <Route path="/quickbooks-services" element={<GenericPage {...pageData.quickbooksServices} />} />
-          <Route path="/industries" element={<GenericPage {...pageData.industries} />} />
+          <Route path="/industries" element={<IndustriesOverview backgroundImage={bannerTechMeeting} />} />
           <Route path="/tax-center" element={<GenericPage {...pageData.taxCenter} />} />
-          <Route path="/resources" element={<GenericPage {...pageData.resources} />} />
+          <Route path="/resources" element={<ResourcesOverview backgroundImage={bannerDesk} />} />
 
           {/* Simple pages */}
           <Route path="/estate-planning" element={<GenericPage {...simplePages.estatePlanning} />} />
