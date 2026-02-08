@@ -110,15 +110,13 @@ const getRelatedPagesForPath = (currentPath) => {
   return { categoryName: null, pages: [] };
 };
 
-const Sidebar = ({ showBooking = true, showContact = true, showCalendar = true, relatedPages: customRelatedPages = [] }) => {
+const Sidebar = ({ showBooking = true, showContact = true, showCalendar = true }) => {
   const [showCalendarModal, setShowCalendarModal] = useState(false);
   const location = useLocation();
   
   // Get related pages based on current path (auto-detected category)
-  const { categoryName, pages: autoRelatedPages } = getRelatedPagesForPath(location.pathname);
-  
-  // Use custom related pages if provided, otherwise use auto-detected ones
-  const relatedPages = customRelatedPages.length > 0 ? customRelatedPages : autoRelatedPages;
+  // Always use the full category list - ignoring any custom relatedPages
+  const { categoryName, pages: relatedPages } = getRelatedPagesForPath(location.pathname);
 
   return (
     <>
@@ -153,7 +151,7 @@ const Sidebar = ({ showBooking = true, showContact = true, showCalendar = true, 
         {relatedPages.length > 0 && (
           <>
             <h3>{categoryName ? `More in ${categoryName}` : 'Related Pages'}</h3>
-            <ul style={{ listStyle: 'none', padding: 0, maxHeight: '300px', overflowY: 'auto' }}>
+            <ul style={{ listStyle: 'none', padding: 0 }}>
               {relatedPages.map((page) => (
                 <li key={page.path} style={{ margin: '0.5rem 0' }}>
                   <Link to={page.path} style={{ color: 'var(--primary-blue)', textDecoration: 'none' }}>{page.label}</Link>
