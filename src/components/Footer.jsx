@@ -15,42 +15,43 @@ const Footer = () => {
             </ul>
           </div>
           <div className="footer-section">
-            <h3>Individual Services</h3>
-            <ul>
-              <li><Link to="/services-individuals">Services Overview</Link></li>
-              <li><Link to="/tax-preparation-individual">Tax Preparation</Link></li>
-              <li><Link to="/tax-planning">Tax Planning</Link></li>
-              <li><Link to="/tax-relief">Tax Relief</Link></li>
-              <li><Link to="/estate-planning">Estate Planning</Link></li>
-            </ul>
-          </div>
-          <div className="footer-section">
             <h3>Business Services</h3>
             <ul>
               <li><Link to="/services-business">Services Overview</Link></li>
-              <li><Link to="/tax-preparation-business">Business Tax</Link></li>
               <li><Link to="/bookkeeping">Bookkeeping</Link></li>
-              <li><Link to="/payroll">Payroll</Link></li>
-              <li><Link to="/quickbooks-services">QuickBooks</Link></li>
+              <li><Link to="/fractional-cfo">Fractional CFO</Link></li>
+              <li><Link to="/audits-reviews">Audit & Review</Link></li>
+              <li><Link to="/internal-controls">Internal Controls</Link></li>
             </ul>
           </div>
           <div className="footer-section">
-            <h3>Resources</h3>
+            <h3>Tax Services</h3>
             <ul>
-              <li><Link to="/tax-center">Tax Center</Link></li>
-              <li><Link to="/financial-calculators">Calculators</Link></li>
-              <li><Link to="/irs-forms">IRS Forms</Link></li>
-              <li><Link to="/tax-rates">Tax Rates</Link></li>
-              <li><Link to="/refund-tracking">Track Your Refund</Link></li>
+              <li><Link to="/tax-services">Tax Services Overview</Link></li>
+              <li><Link to="/tax-preparation-individual">Tax Preparation</Link></li>
+              <li><Link to="/tax-planning">Tax Planning</Link></li>
+              <li><Link to="/tax-relief">Tax Relief</Link></li>
+              <li><Link to="/tax-strategies-business">Business Tax Strategies</Link></li>
             </ul>
           </div>
           <div className="footer-section">
-            <h3>Legal</h3>
+            <h3>Industries</h3>
             <ul>
-              <li><Link to="/privacy-policy">Privacy Policy</Link></li>
-              <li><Link to="/disclaimer">Disclaimer</Link></li>
-              <li><Link to="/security-measures">Security Measures</Link></li>
-              <li><Link to="/sitemap">Sitemap</Link></li>
+              <li><Link to="/industries">Industries Overview</Link></li>
+              <li><Link to="/healthcare-accounting">Healthcare</Link></li>
+              <li><Link to="/construction">Construction</Link></li>
+              <li><Link to="/law-firms">Law Firms</Link></li>
+              <li><Link to="/restaurants">Restaurants</Link></li>
+            </ul>
+          </div>
+          <div className="footer-section">
+            <h3>IT & Governance</h3>
+            <ul>
+              <li><Link to="/it-services">IT Services Overview</Link></li>
+              <li><Link to="/ai-governance">AI Governance</Link></li>
+              <li><Link to="/cloud-governance">Cloud Governance</Link></li>
+              <li><Link to="/it-controls-cybersecurity">Cybersecurity</Link></li>
+              <li><Link to="/privacy-data-protection">Privacy & Data</Link></li>
             </ul>
           </div>
           <div className="footer-section">

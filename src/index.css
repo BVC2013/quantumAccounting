@@ -754,14 +754,6 @@ button.btn-primary {
   color: var(--text-dark);
 }
 
-.service-card ul li:before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: var(--success-color);
-  font-weight: bold;
-}
-
 /* Two Column Layout */
 .two-column {
   display: grid;
@@ -1246,5 +1238,154 @@ footer {
   .sidebar,
   .btn {
     display: none;
+  }
+}
+
+/* ============================================
+   Content Cards - ServiceDetailPage Styles
+   ============================================ */
+
+/* Service Summary Section */
+.service-summary {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, var(--neutral-offwhite) 0%, #e8eef5 100%);
+  border-left: 4px solid var(--accent-gold);
+  border-radius: 0 8px 8px 0;
+}
+
+.service-summary p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+/* Content Cards Grid */
+.content-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Individual Content Card */
+.content-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.content-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.content-card h3 {
+  color: var(--primary-navy);
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--secondary-cyan);
+}
+
+.content-card .card-description {
+  color: var(--text-dark);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* Card Sections (Purpose, Key Activities, Why It Matters) */
+.content-card .card-section {
+  margin-bottom: 1.25rem;
+}
+
+.content-card .card-section:last-of-type {
+  margin-bottom: 0;
+}
+
+.content-card .card-section h4 {
+  color: var(--primary-blue);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+}
+
+.content-card .card-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.content-card .card-section ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.content-card .card-section ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--secondary-cyan);
+  font-weight: bold;
+}
+
+/* Framework Reference */
+.content-card .card-framework {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--border-color);
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+/* Differentiator Section */
+.differentiator-section {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-blue) 100%);
+  border-radius: 12px;
+  color: var(--white);
+}
+
+.differentiator-section h2 {
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.differentiator-section p {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Responsive: Content Cards Grid */
+@media (max-width: 768px) {
+  .content-cards-grid {
+    gap: 1.5rem;
+  }
+  
+  .content-card {
+    padding: 1.5rem;
+  }
+  
+  .service-summary {
+    padding: 1.25rem 1.5rem;
+  }
+  
+  .differentiator-section {
+    padding: 1.5rem;
   }
 }

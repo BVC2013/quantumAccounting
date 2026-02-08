@@ -15,9 +15,15 @@ import ResourcesOverview from './pages/ResourcesOverview';
 import Contact from './pages/Contact';
 import BookMeeting from './pages/BookMeeting';
 import GenericPage from './pages/GenericPage';
+import ServiceDetailPage from './pages/ServiceDetailPage';
 import FinancialCalculators from './pages/FinancialCalculators';
 import IrsForms from './pages/IrsForms';
 import './index.css';
+
+// Import content data from DOCX extractions
+import { businessServicesContent, individualServicesContent } from './data/serviceContent';
+import industriesContent from './data/industriesContent';
+import itServicesContent from './data/itServicesContent';
 
 // Import banner images from assets
 import bannerTeamMeeting from './assets/business-team-meeting-boardroom.jpg';
@@ -169,72 +175,60 @@ const pageData = {
 };
 
 // Simple pages that use GenericPage with minimal content
-// Simple pages that use GenericPage with minimal content
 const simplePages = {
-  estatePlanning: { title: 'Estate Planning', description: 'Protect your legacy and provide for your loved ones with comprehensive estate planning services.', backgroundImage: bannerPlanning },
-  smallBusinessAccounting: { title: 'Small Business Accounting', description: 'Complete accounting solutions designed specifically for small businesses.', backgroundImage: bannerTeamMeeting },
-  bookkeeping: { title: 'Bookkeeping Services', description: 'Accurate, timely bookkeeping to keep your business finances organized.', backgroundImage: bannerLaptopNotes },
-  cfoServices: { title: 'CFO Services', description: 'Strategic financial leadership and guidance for growing businesses.', backgroundImage: bannerTeamMeeting },
-  payroll: { title: 'Payroll Services', description: 'Comprehensive payroll processing, tax filings, and compliance management.', backgroundImage: bannerTeamMeeting },
-  auditsReviews: { title: 'Audits, Reviews & Compilations', description: 'Professional assurance services for your financial statements.', backgroundImage: bannerFeedback },
-  cashFlowManagement: { title: 'Cash Flow Management', description: 'Strategies to optimize your cash flow and improve business health.', backgroundImage: bannerPlanning },
-  businessAdvisory: { title: 'Business Advisory', description: 'Strategic guidance to help your business grow and succeed.', backgroundImage: bannerTeamMeeting },
-  financialPlanningBusiness: { title: 'Financial Planning for Business', description: 'Long-term financial strategies for business success.', backgroundImage: bannerPlanning },
-  newBusinessFormation: { title: 'New Business Formation', description: 'Guidance on entity selection, formation, and startup accounting.', backgroundImage: bannerTeamwork },
-  nonprofit: { title: 'Non-Profit Organizations', description: 'Specialized accounting and compliance services for non-profits.', backgroundImage: bannerTeamwork },
-  internalControls: { title: 'Internal Controls', description: 'Protect your business with effective internal control systems.', backgroundImage: bannerSecurity },
+  // Individual Services
+  estatePlanning: { title: 'Family Wealth & Estate Planning', description: 'Protect your legacy and provide for your loved ones with comprehensive estate and wealth planning services.', backgroundImage: bannerPlanning },
   taxPreparationIndividual: { title: 'Individual Tax Preparation', description: 'Professional preparation of your personal tax returns.', backgroundImage: bannerLaptopNotes },
-  taxPreparationBusiness: { title: 'Business Tax Preparation', description: 'Expert preparation of business tax returns for all entity types.', backgroundImage: bannerLaptopNotes },
-  taxPlanning: { title: 'Tax Planning', description: 'Year-round strategies to minimize your tax liability.', backgroundImage: bannerPlanning },
-  estateTrustTax: { title: 'Estate & Trust Tax Services', description: 'Specialized tax services for estates and trusts.', backgroundImage: bannerPlanning },
-  cryptocurrencyAccounting: { title: 'Cryptocurrency Accounting', description: 'Tax guidance for cryptocurrency transactions and investments.', backgroundImage: bannerMacbook },
-  irsAuditSupport: { title: 'IRS Audit Support', description: 'Professional representation during IRS examinations.', backgroundImage: bannerLaptopNotes },
-  unfiledReturns: { title: 'Unfiled Tax Returns', description: 'Help filing past-due tax returns and getting back into compliance.', backgroundImage: bannerLaptopNotes },
-  backTaxes: { title: 'Back Taxes', description: 'Resolution strategies for unpaid tax balances.', backgroundImage: bannerLaptopNotes },
-  payrollTaxIssues: { title: 'Payroll Tax Issues', description: 'Resolution of payroll tax problems and penalties.', backgroundImage: bannerLaptopNotes },
-  liensLevies: { title: 'Liens & Levies', description: 'Help removing or reducing IRS liens and levies.', backgroundImage: bannerLaptopNotes },
-  wageGarnishment: { title: 'Wage Garnishment', description: 'Stop or reduce IRS wage garnishments.', backgroundImage: bannerLaptopNotes },
-  irsSeizures: { title: 'IRS Seizures', description: 'Protect your property from IRS seizure actions.', backgroundImage: bannerLaptopNotes },
-  paymentPlans: { title: 'Payment Plans', description: 'Negotiate affordable installment agreements with the IRS.', backgroundImage: bannerLaptopNotes },
-  offerInCompromise: { title: 'Offer in Compromise', description: 'Settle your tax debt for less than you owe.', backgroundImage: bannerLaptopNotes },
-  bankruptcyOptions: { title: 'Bankruptcy Options', description: 'Understanding how bankruptcy affects tax debt.', backgroundImage: bannerLaptopNotes },
-  innocentSpouseRelief: { title: 'Innocent Spouse Relief', description: "Relief from your spouse's tax liability.", backgroundImage: bannerReviewing },
-  whyQuickbooks: { title: 'Why QuickBooks', description: 'Discover why QuickBooks is the right choice for your business.', backgroundImage: bannerMacbook },
-  quickbooksSetup: { title: 'QuickBooks Setup', description: 'Professional QuickBooks configuration for your business.', backgroundImage: bannerMacbook },
-  quickbooksTraining: { title: 'QuickBooks Training', description: 'Learn to use QuickBooks effectively with our training.', backgroundImage: bannerMacbook },
-  quickbooksTuneup: { title: 'QuickBooks Tune-Up', description: 'Clean up and optimize your QuickBooks file.', backgroundImage: bannerMacbook },
-  construction: { title: 'Construction Industry', description: 'Specialized accounting for contractors and builders.', backgroundImage: bannerTechMeeting },
-  restaurants: { title: 'Restaurants', description: 'Specialized accounting for restaurants and food service.', backgroundImage: bannerTechMeeting },
-  retail: { title: 'Retail', description: 'Accounting solutions for retail businesses.', backgroundImage: bannerTechMeeting },
-  healthcare: { title: 'Healthcare Industry', description: 'Accounting services for medical practices.', backgroundImage: bannerTechMeeting },
-  dentists: { title: 'Dental Practices', description: 'Specialized accounting for dental offices.', backgroundImage: bannerTechMeeting },
-  hospitality: { title: 'Hospitality Industry', description: 'Accounting for restaurants and hotels.', backgroundImage: bannerTechMeeting },
+  taxPlanning: { title: 'Tax Planning & Strategy', description: 'Year-round strategies to minimize your tax liability.', backgroundImage: bannerPlanning },
+  taxDebtResolution: { title: 'Tax Debt Resolution', description: 'Expert assistance resolving outstanding tax debts with the IRS.', backgroundImage: bannerLaptopNotes },
+  auditDefense: { title: 'IRS Representation & Audit Defense', description: 'Professional representation and defense during IRS audits.', backgroundImage: bannerLaptopNotes },
+  
+  // Business Services
+  bookkeeping: { title: 'Bookkeeping Services', description: 'Accurate, timely bookkeeping with a structured, control-driven approach.', backgroundImage: bannerLaptopNotes },
+  fractionalCfo: { title: 'Fractional CFO Services', description: 'Strategic financial leadership and CFO-level guidance on a part-time basis.', backgroundImage: bannerTeamMeeting },
+  auditsReviews: { title: 'Audit, Review & Compilation Services', description: 'Professional assurance services for your financial statements.', backgroundImage: bannerFeedback },
+  cashFlowManagement: { title: 'Cash Flow Management Services', description: 'Strategies to optimize your cash flow and improve business health.', backgroundImage: bannerPlanning },
+  invoiceProcessing: { title: 'Centralized Invoice Processing Services', description: 'Streamlined invoice processing to improve efficiency and accuracy.', backgroundImage: bannerDesk },
+  healthcareAccounting: { title: 'Healthcare Accounting Services', description: 'Specialized accounting solutions for healthcare organizations.', backgroundImage: bannerTechMeeting },
+  ipoReadiness: { title: 'IPO Readiness Services', description: 'Prepare your company for a successful initial public offering.', backgroundImage: bannerTeamMeeting },
+  taxStrategiesBusiness: { title: 'Tax Strategies for Business', description: 'Business tax strategies to maximize savings and efficiency.', backgroundImage: bannerPlanning },
+  internalControls: { title: 'Internal Control Services', description: 'Protect your business with effective internal control systems.', backgroundImage: bannerSecurity },
+  
+  // Industries
+  restaurants: { title: 'Restaurant Services', description: 'Specialized accounting for restaurants and food service businesses.', backgroundImage: bannerTechMeeting },
+  dentists: { title: 'Dental Practice Services', description: 'Specialized accounting for dental practices and offices.', backgroundImage: bannerTechMeeting },
+  retail: { title: 'Retail Accounting Services', description: 'Comprehensive accounting solutions for retail businesses.', backgroundImage: bannerTechMeeting },
+  construction: { title: 'Construction', description: 'Specialized accounting for contractors and builders.', backgroundImage: bannerTechMeeting },
   lawFirms: { title: 'Law Firms', description: 'Trust accounting and financial services for attorneys.', backgroundImage: bannerTechMeeting },
-  manufacturing: { title: 'Manufacturing', description: 'Cost accounting and financial management for manufacturers.', backgroundImage: bannerTechMeeting },
-  realEstate: { title: 'Real Estate', description: 'Property accounting and real estate tax services.', backgroundImage: bannerTechMeeting },
+  
+  // IT & Governance Services
+  aiGovernance: { title: 'AI & AI Regulatory Governance', description: 'Navigate AI regulations and implement robust AI governance frameworks.', backgroundImage: bannerMacbook },
+  dataGovernance: { title: 'Data Governance', description: 'Establish data quality standards and governance policies.', backgroundImage: bannerMacbook },
+  digitalEnablement: { title: 'Digital Enablement & IT Governance', description: 'Drive digital transformation with effective IT governance.', backgroundImage: bannerMacbook },
+  deliveryFramework: { title: 'IT Service Delivery Framework', description: 'Implement structured delivery frameworks for IT service management.', backgroundImage: bannerMacbook },
+  enterpriseItGovernance: { title: 'Strategy & Enterprise IT Governance', description: 'Align IT strategy with business objectives.', backgroundImage: bannerMacbook },
+  systemImplementation: { title: 'System Implementation Ride Along', description: 'Expert guidance through your system implementation journey.', backgroundImage: bannerMacbook },
+  vendorRiskManagement: { title: 'Third Party & Vendor Risk Management', description: 'Assess and manage risks from third-party vendors.', backgroundImage: bannerSecurity },
+  cloudGovernance: { title: 'Cloud Governance', description: 'Establish governance for cloud infrastructure and services.', backgroundImage: bannerMacbook },
+  itControlsCybersecurity: { title: 'IT General Controls & Cybersecurity Governance', description: 'Strengthen IT controls and cybersecurity posture.', backgroundImage: bannerSecurity },
+  privacyDataProtection: { title: 'Privacy & Data Protection Compliance', description: 'Ensure compliance with privacy regulations and data protection standards.', backgroundImage: bannerSecurity },
+  softwareAssetManagement: { title: 'Software Asset Management (SAM)', description: 'Optimize software licensing and asset management.', backgroundImage: bannerMacbook },
+  qaTesting: { title: 'System Implementation - Quality Testing Assurance', description: 'Quality assurance and testing for system implementations.', backgroundImage: bannerMacbook },
+  
+  // Tax Relief & Other
+  irsAuditSupport: { title: 'IRS Representation & Audit Support', description: 'Professional representation during IRS examinations.', backgroundImage: bannerLaptopNotes },
+  
+  // Resources
   refundTracking: { title: 'Track Your Refund', description: 'Check the status of your tax refund.', backgroundImage: bannerTablet },
   taxDueDates: { title: 'Tax Due Dates', description: 'Important tax filing and payment deadlines.', backgroundImage: bannerDesk },
   taxRates: { title: 'Tax Rates', description: 'Current federal and state tax rates.', backgroundImage: bannerDesk },
-  irsForms: { title: 'IRS Forms & Publications', description: 'Access commonly needed tax forms.', backgroundImage: bannerDesk },
-  recordRetention: { title: 'Record Retention Guide', description: 'How long to keep your financial records.', backgroundImage: bannerDesk },
   stateTaxForms: { title: 'State Tax Forms', description: 'Links to state tax agency forms.', backgroundImage: bannerDesk },
   newsletter: { title: 'Newsletter', description: 'Subscribe to our financial newsletter.', backgroundImage: bannerDesk },
-  financialGuides: { title: 'Financial Guides', description: 'Helpful guides on financial topics.', backgroundImage: bannerDesk },
-  lifeEvents: { title: 'Life Events', description: 'Financial guidance for major life changes.', backgroundImage: bannerReviewing },
-  businessStrategies: { title: 'Business Strategies', description: 'Strategies for business success.', backgroundImage: bannerPlanning },
-  investmentStrategies: { title: 'Investment Strategies', description: 'Guidance on investment planning.', backgroundImage: bannerPlanning },
-  faq: { title: 'Frequently Asked Questions', description: 'Answers to common questions.', backgroundImage: bannerFeedback },
-  financialCalculators: { title: 'Financial Calculators', description: 'Interactive financial planning tools.', backgroundImage: bannerMacbook },
-  clientPortal: { title: 'Client Portal', description: 'Secure access for existing clients.', backgroundImage: bannerSecurity },
   secureUpload: { title: 'Secure File Upload', description: 'Securely send documents to our team.', backgroundImage: bannerSecurity },
-  blog: { title: 'Blog', description: 'Latest news and insights on accounting and tax.', backgroundImage: bannerDesk },
   privacyPolicy: { title: 'Privacy Policy', description: 'How we protect your information.', backgroundImage: bannerSecurity },
   disclaimer: { title: 'Disclaimer', description: 'Important legal information.', backgroundImage: bannerDesk },
   securityMeasures: { title: 'Security Measures', description: 'How we keep your data secure.', backgroundImage: bannerSecurity },
   sitemap: { title: 'Sitemap', description: 'Complete list of pages on our website.', backgroundImage: bannerDesk },
-  taxStrategiesIndividual: { title: 'Tax Strategies for Individuals', description: 'Smart tax strategies to minimize your personal tax burden.', backgroundImage: bannerReviewing },
-  taxStrategiesBusiness: { title: 'Tax Strategies for Business', description: 'Business tax strategies to maximize savings and efficiency.', backgroundImage: bannerPlanning },
-  irsRecordRetrieval: { title: 'IRS Record Retrieval', description: 'Get copies of your past tax records from the IRS.', backgroundImage: bannerDesk },
 };
 
 function App() {
@@ -262,71 +256,347 @@ function App() {
           <Route path="/tax-center" element={<GenericPage {...pageData.taxCenter} />} />
           <Route path="/resources" element={<ResourcesOverview backgroundImage={bannerDesk} />} />
 
-          {/* Simple pages */}
-          <Route path="/estate-planning" element={<GenericPage {...simplePages.estatePlanning} />} />
-          <Route path="/small-business-accounting" element={<GenericPage {...simplePages.smallBusinessAccounting} />} />
-          <Route path="/bookkeeping" element={<GenericPage {...simplePages.bookkeeping} />} />
-          <Route path="/cfo-services" element={<GenericPage {...simplePages.cfoServices} />} />
-          <Route path="/payroll" element={<GenericPage {...simplePages.payroll} />} />
-          <Route path="/audits-reviews" element={<GenericPage {...simplePages.auditsReviews} />} />
-          <Route path="/cash-flow-management" element={<GenericPage {...simplePages.cashFlowManagement} />} />
-          <Route path="/business-advisory" element={<GenericPage {...simplePages.businessAdvisory} />} />
-          <Route path="/financial-planning-business" element={<GenericPage {...simplePages.financialPlanningBusiness} />} />
-          <Route path="/new-business-formation" element={<GenericPage {...simplePages.newBusinessFormation} />} />
-          <Route path="/nonprofit" element={<GenericPage {...simplePages.nonprofit} />} />
-          <Route path="/internal-controls" element={<GenericPage {...simplePages.internalControls} />} />
-          <Route path="/tax-preparation-individual" element={<GenericPage {...simplePages.taxPreparationIndividual} />} />
-          <Route path="/tax-preparation-business" element={<GenericPage {...simplePages.taxPreparationBusiness} />} />
-          <Route path="/tax-planning" element={<GenericPage {...simplePages.taxPlanning} />} />
-          <Route path="/estate-trust-tax" element={<GenericPage {...simplePages.estateTrustTax} />} />
-          <Route path="/cryptocurrency-accounting" element={<GenericPage {...simplePages.cryptocurrencyAccounting} />} />
-          <Route path="/irs-audit-support" element={<GenericPage {...simplePages.irsAuditSupport} />} />
-          <Route path="/unfiled-returns" element={<GenericPage {...simplePages.unfiledReturns} />} />
-          <Route path="/back-taxes" element={<GenericPage {...simplePages.backTaxes} />} />
-          <Route path="/payroll-tax-issues" element={<GenericPage {...simplePages.payrollTaxIssues} />} />
-          <Route path="/liens-levies" element={<GenericPage {...simplePages.liensLevies} />} />
-          <Route path="/wage-garnishment" element={<GenericPage {...simplePages.wageGarnishment} />} />
-          <Route path="/irs-seizures" element={<GenericPage {...simplePages.irsSeizures} />} />
-          <Route path="/payment-plans" element={<GenericPage {...simplePages.paymentPlans} />} />
-          <Route path="/offer-in-compromise" element={<GenericPage {...simplePages.offerInCompromise} />} />
-          <Route path="/bankruptcy-options" element={<GenericPage {...simplePages.bankruptcyOptions} />} />
-          <Route path="/innocent-spouse-relief" element={<GenericPage {...simplePages.innocentSpouseRelief} />} />
-          <Route path="/why-quickbooks" element={<GenericPage {...simplePages.whyQuickbooks} />} />
-          <Route path="/quickbooks-setup" element={<GenericPage {...simplePages.quickbooksSetup} />} />
-          <Route path="/quickbooks-training" element={<GenericPage {...simplePages.quickbooksTraining} />} />
-          <Route path="/quickbooks-tuneup" element={<GenericPage {...simplePages.quickbooksTuneup} />} />
-          <Route path="/construction" element={<GenericPage {...simplePages.construction} />} />
-          <Route path="/restaurants" element={<GenericPage {...simplePages.restaurants} />} />
-          <Route path="/retail" element={<GenericPage {...simplePages.retail} />} />
-          <Route path="/healthcare" element={<GenericPage {...simplePages.healthcare} />} />
-          <Route path="/dentists" element={<GenericPage {...simplePages.dentists} />} />
-          <Route path="/hospitality" element={<GenericPage {...simplePages.hospitality} />} />
-          <Route path="/law-firms" element={<GenericPage {...simplePages.lawFirms} />} />
-          <Route path="/manufacturing" element={<GenericPage {...simplePages.manufacturing} />} />
-          <Route path="/real-estate" element={<GenericPage {...simplePages.realEstate} />} />
+          {/* Individual Services - Using DOCX content */}
+          <Route path="/estate-planning" element={
+            <ServiceDetailPage 
+              {...individualServicesContent.familyWealthEstatePlanning}
+              backgroundImage={bannerPlanning}
+              relatedPages={[
+                { label: 'Tax Planning', path: '/tax-planning' },
+                { label: 'Tax Preparation', path: '/tax-preparation-individual' },
+              ]}
+            />
+          } />
+          <Route path="/tax-preparation-individual" element={
+            <ServiceDetailPage 
+              {...individualServicesContent.individualTaxPreparation}
+              backgroundImage={bannerLaptopNotes}
+              relatedPages={[
+                { label: 'Tax Planning', path: '/tax-planning' },
+                { label: 'Estate Planning', path: '/estate-planning' },
+              ]}
+            />
+          } />
+          <Route path="/tax-planning" element={
+            <ServiceDetailPage 
+              {...individualServicesContent.taxPlanningStrategy}
+              backgroundImage={bannerPlanning}
+              relatedPages={[
+                { label: 'Tax Preparation', path: '/tax-preparation-individual' },
+                { label: 'Estate Planning', path: '/estate-planning' },
+              ]}
+            />
+          } />
+          <Route path="/irs-audit-support" element={
+            <ServiceDetailPage 
+              {...individualServicesContent.irsRepresentation}
+              backgroundImage={bannerLaptopNotes}
+              relatedPages={[
+                { label: 'Tax Debt Resolution', path: '/tax-debt-resolution' },
+                { label: 'Tax Planning', path: '/tax-planning' },
+              ]}
+            />
+          } />
+          <Route path="/tax-debt-resolution" element={
+            <ServiceDetailPage 
+              {...individualServicesContent.taxDebtResolution}
+              backgroundImage={bannerLaptopNotes}
+              relatedPages={[
+                { label: 'IRS Audit Support', path: '/irs-audit-support' },
+                { label: 'Tax Planning', path: '/tax-planning' },
+              ]}
+            />
+          } />
+          <Route path="/audit-defense" element={
+            <ServiceDetailPage 
+              {...individualServicesContent.irsRepresentation}
+              backgroundImage={bannerLaptopNotes}
+              relatedPages={[
+                { label: 'Tax Debt Resolution', path: '/tax-debt-resolution' },
+                { label: 'Tax Preparation', path: '/tax-preparation-individual' },
+              ]}
+            />
+          } />
+
+          {/* Business Services - Using DOCX content */}
+          <Route path="/bookkeeping" element={
+            <ServiceDetailPage 
+              {...businessServicesContent.bookkeeping}
+              backgroundImage={bannerLaptopNotes}
+              relatedPages={[
+                { label: 'CFO Services', path: '/fractional-cfo' },
+                { label: 'Cash Flow Management', path: '/cash-flow-management' },
+              ]}
+            />
+          } />
+          <Route path="/fractional-cfo" element={
+            <ServiceDetailPage 
+              {...businessServicesContent.fractionalCFO}
+              backgroundImage={bannerTeamMeeting}
+              relatedPages={[
+                { label: 'Bookkeeping', path: '/bookkeeping' },
+                { label: 'Business Tax Strategies', path: '/tax-strategies-business' },
+              ]}
+            />
+          } />
+          <Route path="/audits-reviews" element={
+            <ServiceDetailPage 
+              {...businessServicesContent.auditReviewCompilation}
+              backgroundImage={bannerFeedback}
+              relatedPages={[
+                { label: 'Internal Controls', path: '/internal-controls' },
+                { label: 'IPO Readiness', path: '/ipo-readiness' },
+              ]}
+            />
+          } />
+          <Route path="/cash-flow-management" element={
+            <ServiceDetailPage 
+              {...businessServicesContent.cashFlowManagement}
+              backgroundImage={bannerPlanning}
+              relatedPages={[
+                { label: 'CFO Services', path: '/fractional-cfo' },
+                { label: 'Bookkeeping', path: '/bookkeeping' },
+              ]}
+            />
+          } />
+          <Route path="/invoice-processing" element={
+            <ServiceDetailPage 
+              {...businessServicesContent.centralizedInvoiceProcessing}
+              backgroundImage={bannerDesk}
+              relatedPages={[
+                { label: 'Bookkeeping', path: '/bookkeeping' },
+                { label: 'Internal Controls', path: '/internal-controls' },
+              ]}
+            />
+          } />
+          <Route path="/healthcare-accounting" element={
+            <ServiceDetailPage 
+              {...industriesContent.healthcare}
+              backgroundImage={bannerTechMeeting}
+              relatedPages={[
+                { label: 'Dental Practices', path: '/dentists' },
+                { label: 'Industries Overview', path: '/industries' },
+              ]}
+            />
+          } />
+          <Route path="/ipo-readiness" element={
+            <ServiceDetailPage 
+              {...businessServicesContent.ipoReadiness}
+              backgroundImage={bannerTeamMeeting}
+              relatedPages={[
+                { label: 'Internal Controls', path: '/internal-controls' },
+                { label: 'Audits & Reviews', path: '/audits-reviews' },
+              ]}
+            />
+          } />
+          <Route path="/tax-strategies-business" element={
+            <ServiceDetailPage 
+              {...businessServicesContent.businessTaxStrategies}
+              backgroundImage={bannerPlanning}
+              relatedPages={[
+                { label: 'CFO Services', path: '/fractional-cfo' },
+                { label: 'Bookkeeping', path: '/bookkeeping' },
+              ]}
+            />
+          } />
+          <Route path="/internal-controls" element={
+            <ServiceDetailPage 
+              {...businessServicesContent.internalControls}
+              backgroundImage={bannerSecurity}
+              relatedPages={[
+                { label: 'Audits & Reviews', path: '/audits-reviews' },
+                { label: 'IPO Readiness', path: '/ipo-readiness' },
+              ]}
+            />
+          } />
+
+          {/* Industries - Using DOCX content */}
+          <Route path="/restaurants" element={
+            <ServiceDetailPage 
+              {...industriesContent.restaurant}
+              backgroundImage={bannerTechMeeting}
+              relatedPages={[
+                { label: 'Retail', path: '/retail' },
+                { label: 'Industries Overview', path: '/industries' },
+              ]}
+            />
+          } />
+          <Route path="/dentists" element={
+            <ServiceDetailPage 
+              {...industriesContent.dental}
+              backgroundImage={bannerTechMeeting}
+              relatedPages={[
+                { label: 'Healthcare', path: '/healthcare-accounting' },
+                { label: 'Industries Overview', path: '/industries' },
+              ]}
+            />
+          } />
+          <Route path="/retail" element={
+            <ServiceDetailPage 
+              {...industriesContent.retail}
+              backgroundImage={bannerTechMeeting}
+              relatedPages={[
+                { label: 'Restaurants', path: '/restaurants' },
+                { label: 'Industries Overview', path: '/industries' },
+              ]}
+            />
+          } />
+          <Route path="/construction" element={
+            <ServiceDetailPage 
+              {...industriesContent.construction}
+              backgroundImage={bannerTechMeeting}
+              relatedPages={[
+                { label: 'Manufacturing', path: '/manufacturing' },
+                { label: 'Industries Overview', path: '/industries' },
+              ]}
+            />
+          } />
+          <Route path="/law-firms" element={
+            <ServiceDetailPage 
+              {...industriesContent.lawFirms}
+              backgroundImage={bannerTechMeeting}
+              relatedPages={[
+                { label: 'Healthcare', path: '/healthcare-accounting' },
+                { label: 'Industries Overview', path: '/industries' },
+              ]}
+            />
+          } />
+
+          {/* IT & Governance Services - Using DOCX content */}
+          <Route path="/ai-governance" element={
+            <ServiceDetailPage 
+              {...itServicesContent.aiGovernance}
+              backgroundImage={bannerMacbook}
+              relatedPages={[
+                { label: 'Data Governance', path: '/data-governance' },
+                { label: 'IT Services Overview', path: '/it-services' },
+              ]}
+            />
+          } />
+          <Route path="/data-governance" element={
+            <ServiceDetailPage 
+              {...itServicesContent.dataGovernance}
+              backgroundImage={bannerMacbook}
+              relatedPages={[
+                { label: 'AI Governance', path: '/ai-governance' },
+                { label: 'Privacy & Data Protection', path: '/privacy-data-protection' },
+              ]}
+            />
+          } />
+          <Route path="/digital-enablement" element={
+            <ServiceDetailPage 
+              {...itServicesContent.digitalEnablement}
+              backgroundImage={bannerMacbook}
+              relatedPages={[
+                { label: 'Enterprise IT Governance', path: '/enterprise-it-governance' },
+                { label: 'IT Services Overview', path: '/it-services' },
+              ]}
+            />
+          } />
+          <Route path="/delivery-framework" element={
+            <ServiceDetailPage 
+              {...itServicesContent.deliveryFramework}
+              backgroundImage={bannerMacbook}
+              relatedPages={[
+                { label: 'System Implementation', path: '/system-implementation' },
+                { label: 'QA Testing', path: '/qa-testing' },
+              ]}
+            />
+          } />
+          <Route path="/enterprise-it-governance" element={
+            <ServiceDetailPage 
+              {...itServicesContent.enterpriseItGovernance}
+              backgroundImage={bannerMacbook}
+              relatedPages={[
+                { label: 'Digital Enablement', path: '/digital-enablement' },
+                { label: 'Cloud Governance', path: '/cloud-governance' },
+              ]}
+            />
+          } />
+          <Route path="/system-implementation" element={
+            <ServiceDetailPage 
+              {...itServicesContent.systemImplementation}
+              backgroundImage={bannerMacbook}
+              relatedPages={[
+                { label: 'QA Testing', path: '/qa-testing' },
+                { label: 'Delivery Framework', path: '/delivery-framework' },
+              ]}
+            />
+          } />
+          <Route path="/vendor-risk-management" element={
+            <ServiceDetailPage 
+              {...itServicesContent.vendorRiskManagement}
+              backgroundImage={bannerSecurity}
+              relatedPages={[
+                { label: 'IT Controls & Cybersecurity', path: '/it-controls-cybersecurity' },
+                { label: 'Internal Controls', path: '/internal-controls' },
+              ]}
+            />
+          } />
+          <Route path="/cloud-governance" element={
+            <ServiceDetailPage 
+              {...itServicesContent.cloudGovernance}
+              backgroundImage={bannerMacbook}
+              relatedPages={[
+                { label: 'IT Controls & Cybersecurity', path: '/it-controls-cybersecurity' },
+                { label: 'Data Governance', path: '/data-governance' },
+              ]}
+            />
+          } />
+          <Route path="/it-controls-cybersecurity" element={
+            <ServiceDetailPage 
+              {...itServicesContent.itControlsCybersecurity}
+              backgroundImage={bannerSecurity}
+              relatedPages={[
+                { label: 'Cloud Governance', path: '/cloud-governance' },
+                { label: 'Vendor Risk Management', path: '/vendor-risk-management' },
+              ]}
+            />
+          } />
+          <Route path="/privacy-data-protection" element={
+            <ServiceDetailPage 
+              {...itServicesContent.privacyDataProtection}
+              backgroundImage={bannerSecurity}
+              relatedPages={[
+                { label: 'Data Governance', path: '/data-governance' },
+                { label: 'IT Controls & Cybersecurity', path: '/it-controls-cybersecurity' },
+              ]}
+            />
+          } />
+          <Route path="/software-asset-management" element={
+            <ServiceDetailPage 
+              {...itServicesContent.softwareAssetManagement}
+              backgroundImage={bannerMacbook}
+              relatedPages={[
+                { label: 'Vendor Risk Management', path: '/vendor-risk-management' },
+                { label: 'IT Services Overview', path: '/it-services' },
+              ]}
+            />
+          } />
+          <Route path="/qa-testing" element={
+            <ServiceDetailPage 
+              {...itServicesContent.qaTesting}
+              backgroundImage={bannerMacbook}
+              relatedPages={[
+                { label: 'System Implementation', path: '/system-implementation' },
+                { label: 'Delivery Framework', path: '/delivery-framework' },
+              ]}
+            />
+          } />
+
+          {/* Resources */}
           <Route path="/refund-tracking" element={<GenericPage {...simplePages.refundTracking} />} />
           <Route path="/tax-due-dates" element={<GenericPage {...simplePages.taxDueDates} />} />
           <Route path="/tax-rates" element={<GenericPage {...simplePages.taxRates} />} />
           <Route path="/irs-forms" element={<IrsForms />} />
-          <Route path="/record-retention" element={<GenericPage {...simplePages.recordRetention} />} />
           <Route path="/state-tax-forms" element={<GenericPage {...simplePages.stateTaxForms} />} />
           <Route path="/newsletter" element={<GenericPage {...simplePages.newsletter} />} />
-          <Route path="/financial-guides" element={<GenericPage {...simplePages.financialGuides} />} />
-          <Route path="/life-events" element={<GenericPage {...simplePages.lifeEvents} />} />
-          <Route path="/business-strategies" element={<GenericPage {...simplePages.businessStrategies} />} />
-          <Route path="/investment-strategies" element={<GenericPage {...simplePages.investmentStrategies} />} />
-          <Route path="/faq" element={<GenericPage {...simplePages.faq} />} />
           <Route path="/financial-calculators" element={<FinancialCalculators />} />
-          <Route path="/client-portal" element={<GenericPage {...simplePages.clientPortal} />} />
           <Route path="/secure-upload" element={<GenericPage {...simplePages.secureUpload} />} />
-          <Route path="/blog" element={<GenericPage {...simplePages.blog} />} />
           <Route path="/privacy-policy" element={<GenericPage {...simplePages.privacyPolicy} />} />
           <Route path="/disclaimer" element={<GenericPage {...simplePages.disclaimer} />} />
           <Route path="/security-measures" element={<GenericPage {...simplePages.securityMeasures} />} />
           <Route path="/sitemap" element={<GenericPage {...simplePages.sitemap} />} />
-          <Route path="/tax-strategies-individual" element={<GenericPage {...simplePages.taxStrategiesIndividual} />} />
-          <Route path="/tax-strategies-business" element={<GenericPage {...simplePages.taxStrategiesBusiness} />} />
-          <Route path="/irs-record-retrieval" element={<GenericPage {...simplePages.irsRecordRetrieval} />} />
           
           {/* 404 fallback */}
           <Route path="*" element={
