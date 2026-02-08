@@ -487,6 +487,109 @@ nav {
   border: none;
 }
 
+/* Calendar Modal (Sidebar) */
+.calendar-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 1rem;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.calendar-modal {
+  background: var(--white);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.calendar-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: var(--gradient-primary);
+  color: var(--white);
+}
+
+.calendar-modal-header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.calendar-modal-close {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--white);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.calendar-modal-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.calendar-modal-content {
+  padding: 1rem;
+  background: var(--bg-light);
+}
+
+@media (max-width: 768px) {
+  .calendar-modal {
+    max-width: 100%;
+    margin: 0.5rem;
+    max-height: 95vh;
+  }
+  
+  .calendar-modal-header {
+    padding: 0.75rem 1rem;
+  }
+  
+  .calendar-modal-header h2 {
+    font-size: 1.1rem;
+  }
+  
+  .calendar-modal-content iframe {
+    height: 500px !important;
+  }
+}
+
 /* Hero Section */
 .hero {
   background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-blue) 100%);
