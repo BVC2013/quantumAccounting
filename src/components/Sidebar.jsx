@@ -172,7 +172,7 @@ const Sidebar = ({ showBooking = true, showContact = true, showCalendar = true }
               }}
             >
               <iframe
-                src="https://meetings-na3.hubspot.com/nischal?embed=true"
+                src="https://meetings-na3.hubspot.com/quantum?embed=true"
                 title="Schedule a Meeting"
                 style={{
                   width: '100%',
@@ -208,7 +208,7 @@ const Sidebar = ({ showBooking = true, showContact = true, showCalendar = true }
             </div>
             <div className="calendar-modal-content">
               <iframe
-                src="https://meetings-na3.hubspot.com/nischal?embed=true"
+                src="https://meetings-na3.hubspot.com/quantum?embed=true"
                 title="Schedule a Meeting"
                 style={{
                   width: '100%',

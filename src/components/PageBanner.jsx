@@ -5,7 +5,7 @@ import Breadcrumb from './Breadcrumb';
 const PageBanner = ({ 
   title, 
   backgroundImage, 
-  hubspotUrl = 'https://meetings-na3.hubspot.com/nischal'
+  hubspotUrl = 'https://meetings-na3.hubspot.com/quantum'
 }) => {
   const location = useLocation();
   const [showScheduler, setShowScheduler] = useState(false);

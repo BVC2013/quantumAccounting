@@ -47,7 +47,7 @@ const BookMeeting = ({ backgroundImage = '' }) => {
               }}
             >
               <iframe
-                src="https://meetings-na3.hubspot.com/nischal?embed=true"
+                src="https://meetings-na3.hubspot.com/quantum?embed=true"
                 title="Schedule a Meeting"
                 style={{
                   width: '100%',
