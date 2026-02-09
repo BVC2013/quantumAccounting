@@ -24,6 +24,7 @@ const pageCategories = {
       { label: 'Business Tax Preparation', path: '/tax-preparation-business' },
       { label: 'Tax Strategies for Business', path: '/tax-strategies-business' },
       { label: 'Internal Control Services', path: '/internal-controls' },
+      { label: 'QuickBooks Services', path: '/quickbooks-services' },
     ],
   },
   individualServices: {

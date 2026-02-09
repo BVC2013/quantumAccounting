@@ -935,6 +935,69 @@ export const businessServicesContent = {
         ]
       }
     ]
+  },
+
+  quickbooksServices: {
+    title: "QuickBooks Services",
+    summary: "QuickBooks Services help you gain valuable financial insights and more freedom to focus on your business. Whether you're switching to a paperless accounting system or optimizing your existing QuickBooks setup, we provide comprehensive support including setup, customization, training, and tune-ups. With both desktop and online versions, QuickBooks makes it easy to view transaction records and prepare custom reports that help you manage cash flow, monitor income and expenses, and make sound business decisions.",
+    cards: [
+      {
+        title: "QuickBooks Setup & Customization",
+        description: "Although QuickBooks is designed for the layperson to understand, the initial setup and installation can be tricky. Save hours of frustration by allowing us to set up QuickBooks for you correctly. We customize the software specifically for your business, including integrating third-party invoicing or bill pay software.",
+        purpose: [
+          "Set up QuickBooks correctly from the start to avoid costly mistakes",
+          "Customize chart of accounts, preferences, and workflows for your industry",
+          "Integrate third-party invoicing, bill pay, and banking connections"
+        ],
+        whyItMatters: [
+          "Prevents common setup errors that cause reporting problems",
+          "Saves hours of frustration and rework down the road",
+          "Creates a solid foundation for accurate financial management"
+        ]
+      },
+      {
+        title: "QuickBooks Training",
+        description: "Once QuickBooks is set up and working properly, we can train you or your employees how to use QuickBooks specifically for your business. Our personalized training sessions cover everything from basic data entry to advanced reporting features.",
+        purpose: [
+          "Provide personalized training at your location or ours",
+          "Teach best practices for daily transactions and reconciliation",
+          "Cover reporting, invoicing, and accounts payable workflows"
+        ],
+        whyItMatters: [
+          "Empowers your team to use QuickBooks confidently and efficiently",
+          "Reduces errors from improper data entry or workflow mistakes",
+          "Maximizes the value of your QuickBooks investment"
+        ]
+      },
+      {
+        title: "QuickBooks Tune-Up",
+        description: "Whether you need to prepare your books for tax time, a financial review, or you just need to clean up some problem areas, you'll get your QuickBooks running smoothly again with a complete tune-up. We review, sort, and process transactions, reconcile accounts, and clean up your bookkeeping system.",
+        purpose: [
+          "Review and reconcile the general ledger and all accounts",
+          "Clean up problem areas, duplicate entries, and misclassifications",
+          "Prepare required reports for tax time or financial reviews"
+        ],
+        whyItMatters: [
+          "Gets your books audit-ready and tax-ready faster",
+          "Identifies and corrects errors before they compound",
+          "Restores confidence in your financial data accuracy"
+        ]
+      },
+      {
+        title: "Ongoing QuickBooks Support",
+        description: "We are available to perform periodic reviews of your QuickBooks system, reviewing transactions and maintaining your bookkeeping system. Our ongoing support ensures your QuickBooks stays organized and your financial data remains reliable month after month.",
+        purpose: [
+          "Perform monthly or quarterly transaction reviews",
+          "Maintain bank reconciliations and account accuracy",
+          "Provide on-call support for QuickBooks questions and issues"
+        ],
+        whyItMatters: [
+          "Keeps your books consistently organized and up-to-date",
+          "Catches issues early before they become larger problems",
+          "Provides peace of mind knowing experts are monitoring your books"
+        ]
+      }
+    ]
   }
 };
 

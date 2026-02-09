@@ -49,6 +49,11 @@ const ServicesBusiness = ({ backgroundImage = '' }) => {
       description: 'Design processes that safeguard assets, prevent fraud, and give owners confidence in reported results.',
       path: '/internal-controls',
     },
+    {
+      title: 'QuickBooks Services',
+      description: 'Expert QuickBooks setup, training, tune-ups, and ongoing support to streamline your accounting.',
+      path: '/quickbooks-services',
+    },
   ];
 
   return (

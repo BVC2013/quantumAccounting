@@ -109,22 +109,6 @@ const pageData = {
       { label: 'Payment Plans', path: '/payment-plans' },
     ],
   },
-  quickbooksServices: {
-    title: 'QuickBooks Services',
-    description: 'Expert QuickBooks setup, training, and support to streamline your accounting.',
-    backgroundImage: bannerMacbook,
-    sections: [
-      { title: 'Why QuickBooks?', content: 'QuickBooks is the #1 accounting software for small businesses, used by over 7 million companies. It streamlines invoicing, expense tracking, payroll, and financial reporting. As certified QuickBooks ProAdvisors, we help you leverage its full potential to save time, reduce errors, and gain better visibility into your business finances.' },
-      { title: 'Setup & Configuration', content: 'A properly configured QuickBooks file is essential for accurate reporting. We set up your chart of accounts, connect bank feeds, configure sales tax, establish customer and vendor lists, and customize settings for your industry. Start right from day one and avoid costly cleanup later.' },
-      { title: 'Training', content: 'Learn to use QuickBooks with confidence. Our hands-on training covers daily transactions, bank reconciliation, invoicing, reporting, and more. We customize training to your role—whether you\'re a business owner who needs the big picture or a bookkeeper handling daily entries.' },
-      { title: 'Tune-Up Services', content: 'If your QuickBooks file has errors, duplicate entries, or hasn\'t been reconciled in months, we can help. Our tune-up service cleans up your data, corrects mistakes, reconciles accounts, and gets your books back to a reliable state. We also identify process improvements to prevent future issues.' },
-    ],
-    relatedPages: [
-      { label: 'QuickBooks Setup', path: '/quickbooks-setup' },
-      { label: 'QuickBooks Training', path: '/quickbooks-training' },
-      { label: 'QuickBooks Tune-Up', path: '/quickbooks-tuneup' },
-    ],
-  },
   industries: {
     title: 'Industry Specialties',
     description: 'We provide specialized accounting and tax services tailored to your industry.',
@@ -255,7 +239,16 @@ function App() {
           <Route path="/services-business" element={<ServicesBusiness backgroundImage={bannerTeamMeeting} />} />
           <Route path="/tax-relief" element={<TaxReliefOverview backgroundImage={bannerLaptopNotes} />} />
           <Route path="/it-services" element={<ItServicesOverview backgroundImage={bannerMacbook} />} />
-          <Route path="/quickbooks-services" element={<GenericPage {...pageData.quickbooksServices} />} />
+          <Route path="/quickbooks-services" element={
+            <ServiceDetailPage 
+              {...businessServicesContent.quickbooksServices}
+              backgroundImage={bannerMacbook}
+              relatedPages={[
+                { label: 'Bookkeeping', path: '/bookkeeping' },
+                { label: 'Business Services Overview', path: '/services-business' },
+              ]}
+            />
+          } />
           <Route path="/industries" element={<IndustriesOverview backgroundImage={bannerTechMeeting} />} />
           <Route path="/tax-center" element={<GenericPage {...pageData.taxCenter} />} />
           <Route path="/resources" element={<ResourcesOverview backgroundImage={bannerDesk} />} />
