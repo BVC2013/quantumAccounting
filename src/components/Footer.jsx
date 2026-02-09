@@ -26,10 +26,10 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Tax Services</h3>
             <ul>
+              <li><Link to="/tax-planning">Tax Planning</Link></li>
               <li><Link to="/tax-services">Tax Services Overview</Link></li>
               <li><Link to="/tax-preparation-individual">Individual Tax Prep</Link></li>
               <li><Link to="/tax-preparation-business">Business Tax Prep</Link></li>
-              <li><Link to="/tax-planning">Tax Planning</Link></li>
             </ul>
           </div>
           <div className="footer-section">
