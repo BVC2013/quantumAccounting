@@ -35,6 +35,11 @@ const ServicesBusiness = ({ backgroundImage = '' }) => {
       path: '/ipo-readiness',
     },
     {
+      title: 'Business Tax Preparation',
+      description: 'Accurate federal, state, and local filings for every entity type with proactive guidance to minimize taxes.',
+      path: '/tax-preparation-business',
+    },
+    {
       title: 'Tax Strategies',
       description: 'Implement profit-smart tax strategies tailored to your industry, structure, and long-term goals.',
       path: '/tax-strategies-business',

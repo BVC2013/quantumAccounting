@@ -398,7 +398,17 @@ function App() {
               {...businessServicesContent.businessTaxStrategies}
               backgroundImage={bannerPlanning}
               relatedPages={[
+                { label: 'Business Tax Preparation', path: '/tax-preparation-business' },
                 { label: 'CFO Services', path: '/fractional-cfo' },
+              ]}
+            />
+          } />
+          <Route path="/tax-preparation-business" element={
+            <ServiceDetailPage 
+              {...businessServicesContent.businessTaxPreparation}
+              backgroundImage={bannerLaptopNotes}
+              relatedPages={[
+                { label: 'Business Tax Strategies', path: '/tax-strategies-business' },
                 { label: 'Bookkeeping', path: '/bookkeeping' },
               ]}
             />

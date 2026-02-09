@@ -318,6 +318,112 @@ export const businessServicesContent = {
     ]
   },
 
+  businessTaxPreparation: {
+    title: "Business Tax Preparation",
+    summary: "Business Tax Preparation is a structured, secure process for preparing and filing accurate business returns while reducing compliance and audit risk. Instead of treating filing as a one-time event, Quantum reviews the full financial picture to ensure positions are consistent, supportable, and aligned with forward-looking optimization opportunities. Our work is governance-first and control-driven, grounded in Quantum's six pillars: Clarity, Consistency, Compliance, Communication, Control, and Comprehensiveness. The outcome is decision-ready filings with clear documentation, disciplined review, and predictable execution year over year.",
+    cards: [
+      {
+        title: "Discovery & Business Context",
+        description: "This phase establishes the full financial narrative behind the forms so the return reflects real business activity rather than isolated documents. It also sets the control baseline for the engagement by clarifying assumptions, timing expectations, and what would trigger follow-up questions or expanded scope.",
+        purpose: [
+          "Capture revenue sources, major transactions, and related financial activity beyond standard forms",
+          "Identify early risks, gaps, and planning opportunities that shape the filing approach",
+          "Confirm scope and information needs for a controlled engagement"
+        ],
+        whyItMatters: [
+          "Improves accuracy by aligning the return to the real business context",
+          "Reduces rework and late-cycle surprises through early clarity",
+          "Strengthens defensibility by documenting key facts and assumptions"
+        ]
+      },
+      {
+        title: "Checklist of Information Required",
+        description: "This phase translates discovery into a tailored information plan, ensuring the right evidence is requested for the specific business fact pattern—rather than relying on generic lists. It also establishes completeness expectations early so missing items are identified while there is still time to resolve them without deadline pressure.",
+        purpose: [
+          "Provide a tailored, comprehensive document checklist based on the discovery findings",
+          "Set expectations for completeness and timing to maintain control over the workflow",
+          "Confirm required support for deductions, credits, and complex business activities"
+        ],
+        whyItMatters: [
+          "Increases completeness and reduces missing-support exposure",
+          "Improves audit defensibility with clear, organized substantiation",
+          "Keeps the process consistent and predictable across filing seasons"
+        ]
+      },
+      {
+        title: "Secure Portal & Document Management",
+        description: "This phase creates an organized evidence record that can be referenced quickly if questions arise later, minimizing the need to reconstruct what was provided. It also reduces confidentiality risk by keeping sensitive business information controlled, centralized, and consistently handled throughout the workflow.",
+        purpose: [
+          "Collect and organize documents through controlled, secure intake and storage",
+          "Maintain version control and categorization by tax year and document type",
+          "Preserve an audit-ready trail of what was provided and used"
+        ],
+        whyItMatters: [
+          "Reduces data handling risk and improves confidentiality discipline",
+          "Improves traceability for future questions or tax authority inquiries",
+          "Enables consistent record retention and faster year-over-year continuity"
+        ],
+        frameworkReference: "ISO/IEC 27001-aligned information security practices to support controlled handling of sensitive records"
+      },
+      {
+        title: "Business Return Preparation & Entity Compliance",
+        description: "This phase uses structured validation and expert review to improve completeness and consistency across all entity types including S-Corps, C-Corps, partnerships, and LLCs. It applies disciplined cross-check logic to identify opportunities and inconsistencies while ensuring compliance with federal and state requirements.",
+        purpose: [
+          "Prepare returns for all entity types using professional systems with structured validation",
+          "Apply cross-checks to identify inconsistencies, omissions, and optimization opportunities",
+          "Ensure compliance with federal, state, and local filing requirements"
+        ],
+        whyItMatters: [
+          "Reduces errors and improves filing reliability across entity types",
+          "Enhances compliant optimization through disciplined analysis",
+          "Improves confidence that returns reflect current requirements"
+        ]
+      },
+      {
+        title: "Review, Filing & Confirmation",
+        description: "This phase ensures the final submission is controlled through documented review and approval, reducing ambiguity about what was filed and why. It also confirms end-to-end completion by validating acceptance and ensuring final deliverables are retained in an organized, accessible format.",
+        purpose: [
+          "Perform internal quality review before submission",
+          "Complete client review and documented approval prior to filing",
+          "File electronically and confirm acceptance with secure delivery of final outputs"
+        ],
+        whyItMatters: [
+          "Strengthens control and accountability for what is filed",
+          "Improves audit readiness with documented review and approval evidence",
+          "Provides confidence and closure through confirmation and secure retention"
+        ]
+      },
+      {
+        title: "Post-Filing: Tax Planning Strategy Call",
+        description: "This phase converts the filing outcome into a forward-looking action plan by identifying what can be adjusted before the next year's results are locked in. It creates continuity by connecting the return to practical business decisions—entity structure, estimated payments, retirement contributions, and timing strategies.",
+        purpose: [
+          "Explain key drivers of the filed outcome in clear business terms",
+          "Identify practical adjustments for the upcoming year (estimated payments, structure, timing)",
+          "Define near-term actions to reduce future tax exposure"
+        ],
+        whyItMatters: [
+          "Moves planning upstream—before future outcomes are locked in",
+          "Improves predictability and reduces year-end surprises",
+          "Creates a repeatable planning cadence that supports better decisions"
+        ]
+      },
+      {
+        title: "Post-Completion Feedback",
+        description: "This phase ensures the process improves over time by capturing what created friction and what enabled speed, clarity, and better outcomes. It also strengthens next-cycle execution by documenting preferences, recurring data needs, and workflow improvements while the experience is still current.",
+        purpose: [
+          "Capture feedback on workflow clarity, responsiveness, and deliverable usefulness",
+          "Identify process and control improvements for the next cycle",
+          "Align expectations for ongoing support"
+        ],
+        whyItMatters: [
+          "Improves consistency and service quality over time",
+          "Reduces friction and increases predictability for future engagements",
+          "Strengthens governance through continuous refinement"
+        ]
+      }
+    ]
+  },
+
   businessTaxStrategies: {
     title: "Business Tax Strategies",
     summary: "Business Tax Strategies provide structured advisory support to design tax outcomes through intentional operating and ownership decisions. Businesses often overpay due to inefficient entity structure, compensation design, or multi-jurisdiction exposure that cannot be corrected at filing time. Quantum's approach is governance-first and control-driven, grounded in Clarity, Consistency, Compliance, Communication, Control, and Comprehensiveness, and focused on clear tradeoffs and defensible documentation. The outcome is a strategy that supports scalable growth, predictable compliance, and better control over long-term tax exposure.",

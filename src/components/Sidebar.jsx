@@ -21,6 +21,7 @@ const pageCategories = {
       { label: 'Cash Flow Management', path: '/cash-flow-management' },
       { label: 'Centralized Invoice Processing', path: '/invoice-processing' },
       { label: 'IPO Readiness Services', path: '/ipo-readiness' },
+      { label: 'Business Tax Preparation', path: '/tax-preparation-business' },
       { label: 'Tax Strategies for Business', path: '/tax-strategies-business' },
       { label: 'Internal Control Services', path: '/internal-controls' },
     ],
