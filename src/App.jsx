@@ -52,7 +52,7 @@ const pageData = {
       { title: 'Integrity', content: 'We operate with complete honesty and transparency in all our dealings. Your trust is the foundation of our relationship, and we work every day to earn and maintain it through ethical practices, clear communication, and always putting your interests first.' },
       { title: 'Excellence', content: 'We strive for the highest standards in every service we provide. Our team continuously updates their knowledge of tax laws, accounting standards, and industry best practices to deliver exceptional results for every client.' },
       { title: 'Client Focus', content: 'Your success is our priority. We listen carefully to understand your unique situation, goals, and challenges. Then we deliver customized solutions tailored specifically to your needs—not one-size-fits-all advice.' },
-      { title: 'Innovation', content: 'We embrace modern technology and methods to serve you better. From secure client portals to cloud-based accounting solutions, we leverage the latest tools to provide efficient, accurate, and convenient service.' },
+      { title: 'Innovation', content: 'We embrace modern technology and methods to serve you better. From secure document sharing to cloud-based accounting solutions, we leverage the latest tools to provide efficient, accurate, and convenient service.' },
       { title: 'Accessibility', content: "We're here when you need us, providing year-round support and guidance. Tax and financial questions don't only arise during tax season, and neither should your access to professional advice." },
     ],
     relatedPages: [

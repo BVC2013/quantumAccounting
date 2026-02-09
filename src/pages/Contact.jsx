@@ -23,7 +23,7 @@ const Contact = ({ backgroundImage = '' }) => {
 
             <h3>Contact Information</h3>
             <p>
-              <strong>Phone:</strong> <a href="tel:+15551234567">(555) 123-4567</a>
+              <strong>Phone:</strong> <a href="tel:+19085663799">(908) 566-3799</a>
               <br />
               <strong>Email:</strong> <a href="mailto:hello@quantum-accountant.com">hello@quantum-accountant.com</a>
               <br />
@@ -54,19 +54,6 @@ const Contact = ({ backgroundImage = '' }) => {
               style={{ width: '100%', marginBottom: '1rem', display: 'block', textAlign: 'center', color: '#ffffff' }}
             >
               Book a Meeting
-            </Link>
-
-            <h3>Client Portal</h3>
-            <p>
-              Existing clients can access their portal to view documents and
-              communicate securely.
-            </p>
-            <Link
-              to="/client-portal"
-              className="btn btn-secondary"
-              style={{ width: '100%', display: 'block', textAlign: 'center', color: 'var(--primary-navy)', border: '2px solid var(--primary-navy)' }}
-            >
-              Client Portal Login
             </Link>
           </div>
         </div>

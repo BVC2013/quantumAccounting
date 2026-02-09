@@ -84,10 +84,6 @@ const pathConfig = {
   '/resources': { parent: null, label: 'Resources' },
   '/business-strategies': { parent: '/resources', label: 'Business Strategies' },
   
-  // Client Tools
-  '/client-portal': { parent: null, label: 'Client Portal' },
-  '/secure-upload': { parent: '/client-portal', label: 'Secure Upload' },
-  
   // Legal
   '/privacy-policy': { parent: null, label: 'Privacy Policy' },
   '/disclaimer': { parent: null, label: 'Disclaimer' },
