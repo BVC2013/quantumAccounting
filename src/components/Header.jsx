@@ -58,6 +58,7 @@ const Header = () => {
         { label: 'Tax Services Overview', path: '/tax-services' },
         { label: 'Business Tax Services', path: '#', isHeader: true },
         { label: 'Business Tax Strategies', path: '/tax-strategies-business' },
+        { label: 'Business Tax Preparation', path: '/tax-preparation-business' },
         { label: 'Individual Tax Services', path: '#', isHeader: true },
         { label: 'Tax Preparation', path: '/tax-preparation-individual' },
         { label: 'Tax Planning & Strategy', path: '/tax-planning' },

@@ -135,6 +135,7 @@ const Sidebar = ({ showBooking = true, showContact = true, showCalendar = true }
         {showContact && (
           <>
             <h3>Contact Us</h3>
+            <p style={{ color: 'var(--text-dark)', marginBottom: '0.5rem' }}><strong>Morris Plains, NJ</strong></p>
             <p style={{ color: 'var(--text-dark)' }}><a href="tel:+19085663799" style={{ color: 'var(--primary-blue)' }}><strong>Phone:</strong> (908) 566-3799</a></p>
             <p style={{ color: 'var(--text-dark)' }}><a href="mailto:hello@quantum-accountant.com" style={{ color: 'var(--primary-blue)' }}><strong>Email:</strong> hello@quantum-accountant.com</a></p>
             <p style={{ color: 'var(--text-dark)' }}>

@@ -8,7 +8,7 @@ const Contact = ({ backgroundImage = '' }) => {
     <>
       <PageBanner 
         title="Contact Us" 
-        subtitle="We're here to help with all your accounting, tax, and financial advisory needs."
+        subtitle="Based in Morris Plains, NJ — serving clients throughout New Jersey and nationwide."
         backgroundImage={backgroundImage}
       />
       <div className="page-content container">
@@ -23,9 +23,14 @@ const Contact = ({ backgroundImage = '' }) => {
 
             <h3>Contact Information</h3>
             <p>
+              <strong>Location:</strong> Morris Plains, NJ
+              <br />
               <strong>Phone:</strong> <a href="tel:+19085663799">(908) 566-3799</a>
               <br />
               <strong>Email:</strong> <a href="mailto:hello@quantum-accountant.com">hello@quantum-accountant.com</a>
+            </p>
+            <p style={{ marginTop: '0.5rem', fontSize: '0.95rem', color: '#666' }}>
+              Proudly serving clients throughout Morris County, Northern New Jersey, and nationwide.
             </p>
 
             <h3>Office Hours</h3>

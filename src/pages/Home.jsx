@@ -83,7 +83,7 @@ const Home = ({ backgroundImage = '/images/banners/home.jpg' }) => {
     <>
       <PageBanner
         title="You Grow and Scale. We Handle the Details."
-        subtitle="Trusted accounting and tax advisors providing year-round support, strategic guidance, and peace of mind for individuals and businesses."
+        subtitle="Morris Plains, NJ — Trusted accounting and tax advisors providing year-round support, strategic guidance, and peace of mind for individuals and businesses."
         backgroundImage={backgroundImage}
       />
 

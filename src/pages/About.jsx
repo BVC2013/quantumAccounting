@@ -7,7 +7,7 @@ const About = ({ backgroundImage = '' }) => {
     <>
       <PageBanner 
         title="About Quantum Accounting & Advisory" 
-        subtitle="Helping individuals and businesses gain clarity, stay compliant, and scale with confidence."
+        subtitle="Based in Morris Plains, NJ — helping individuals and businesses gain clarity, stay compliant, and scale with confidence."
         backgroundImage={backgroundImage}
       />
       <div className="page-content container">
@@ -15,15 +15,15 @@ const About = ({ backgroundImage = '' }) => {
           <div>
             <h2>Who We Are</h2>
             <p>
-              At Quantum Accounting & Advisory LLC, we are a team of seasoned 
+              Based in Morris Plains, NJ, Quantum Accounting & Advisory LLC is a team of seasoned 
               accounting and advisory professionals committed to serving individuals, 
               families, and businesses with integrity, precision, and insight. Our 
               expertise spans accounting, compliance, and strategic advisory—grounded 
               in deep technical knowledge and delivered with a client-first mindset.
             </p>
             <p>
-              What truly sets us apart is our philosophy. We don't simply process 
-              transactions or prepare reports. We take the time to understand your 
+              Serving clients throughout Morris County, Northern New Jersey, and nationwide, 
+              we don't simply process transactions or prepare reports. We take the time to understand your 
               goals, business model, customers, and challenges, so our guidance goes 
               beyond completing tasks—it helps you make better decisions.
             </p>
