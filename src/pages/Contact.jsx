@@ -26,10 +26,6 @@ const Contact = ({ backgroundImage = '' }) => {
               <strong>Phone:</strong> <a href="tel:+19085663799">(908) 566-3799</a>
               <br />
               <strong>Email:</strong> <a href="mailto:hello@quantum-accountant.com">hello@quantum-accountant.com</a>
-              <br />
-              <strong>Address:</strong> 123 Financial Plaza, Suite 400
-              <br />
-              Houston, TX 77002
             </p>
 
             <h3>Office Hours</h3>
