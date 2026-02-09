@@ -57,18 +57,6 @@ const BookMeeting = ({ backgroundImage = '' }) => {
                 }}
               />
             </div>
-
-            <h3>Prefer to Call?</h3>
-            <p>
-              If you'd rather speak with someone directly, give us a call during
-              business hours and we'll be happy to schedule your consultation
-              over the phone.
-            </p>
-            <p>
-              <strong>Phone:</strong> (555) 123-4567
-              <br />
-              <strong>Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM
-            </p>
           </div>
 
           <Sidebar
