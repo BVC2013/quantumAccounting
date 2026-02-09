@@ -21,7 +21,6 @@ const Footer = () => {
               <li><Link to="/bookkeeping">Bookkeeping</Link></li>
               <li><Link to="/fractional-cfo">Fractional CFO</Link></li>
               <li><Link to="/audits-reviews">Audit & Review</Link></li>
-              <li><Link to="/internal-controls">Internal Controls</Link></li>
             </ul>
           </div>
           <div className="footer-section">
@@ -31,16 +30,14 @@ const Footer = () => {
               <li><Link to="/tax-preparation-individual">Individual Tax Prep</Link></li>
               <li><Link to="/tax-preparation-business">Business Tax Prep</Link></li>
               <li><Link to="/tax-planning">Tax Planning</Link></li>
-              <li><Link to="/tax-strategies-business">Business Tax Strategies</Link></li>
             </ul>
           </div>
           <div className="footer-section">
             <h3>Industries</h3>
             <ul>
               <li><Link to="/industries">Industries Overview</Link></li>
-              <li><Link to="/healthcare-accounting">Healthcare</Link></li>
+              <li><Link to="/retail">Retail</Link></li>
               <li><Link to="/construction">Construction</Link></li>
-              <li><Link to="/law-firms">Law Firms</Link></li>
               <li><Link to="/restaurants">Restaurants</Link></li>
             </ul>
           </div>
@@ -51,7 +48,6 @@ const Footer = () => {
               <li><Link to="/ai-governance">AI Governance</Link></li>
               <li><Link to="/cloud-governance">Cloud Governance</Link></li>
               <li><Link to="/it-controls-cybersecurity">Cybersecurity</Link></li>
-              <li><Link to="/privacy-data-protection">Privacy & Data</Link></li>
             </ul>
           </div>
           <div className="footer-section">
