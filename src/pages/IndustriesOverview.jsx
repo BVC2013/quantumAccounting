@@ -5,14 +5,9 @@ import Sidebar from '../components/Sidebar';
 const IndustriesOverview = ({ backgroundImage = '' }) => {
   const industryCards = [
     {
-      title: 'Industries Overview',
-      description: 'See how we tailor accounting, tax, and advisory support to the unique demands of each industry we serve.',
-      path: '/industries',
-    },
-    {
-      title: 'Construction',
-      description: 'Job-costing, WIP reporting, compliance, and bonding support for contractors and builders.',
-      path: '/construction',
+      title: 'Healthcare',
+      description: 'HIPAA-aware accounting, compensation planning, and revenue cycle support for medical groups.',
+      path: '/healthcare-accounting',
     },
     {
       title: 'Restaurants',
@@ -20,29 +15,19 @@ const IndustriesOverview = ({ backgroundImage = '' }) => {
       path: '/restaurants',
     },
     {
+      title: 'Dental Practices',
+      description: 'Chair-time productivity, insurance collections, and cash flow planning designed for dental practices.',
+      path: '/dentists',
+    },
+    {
       title: 'Retail',
       description: 'Multi-location reporting, POS integrations, and margin analysis to keep shelves profitable.',
       path: '/retail',
     },
     {
-      title: 'Manufacturing',
-      description: 'Cost accounting, inventory valuation, and production analytics for make-to-order and make-to-stock shops.',
-      path: '/manufacturing',
-    },
-    {
-      title: 'Dentists',
-      description: 'Chair-time productivity, insurance collections, and cash flow planning designed for dental practices.',
-      path: '/dentists',
-    },
-    {
-      title: 'Healthcare',
-      description: 'HIPAA-aware accounting, compensation planning, and revenue cycle support for medical groups.',
-      path: '/healthcare',
-    },
-    {
-      title: 'Real Estate',
-      description: 'Entity structuring, 1031 coordination, and cash flow insights for investors and property managers.',
-      path: '/real-estate',
+      title: 'Construction',
+      description: 'Job-costing, WIP reporting, compliance, and bonding support for contractors and builders.',
+      path: '/construction',
     },
     {
       title: 'Law Firms',

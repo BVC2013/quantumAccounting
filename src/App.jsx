@@ -18,6 +18,10 @@ import GenericPage from './pages/GenericPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
 import FinancialCalculators from './pages/FinancialCalculators';
 import IrsForms from './pages/IrsForms';
+import TaxRates from './pages/TaxRates';
+import StateTaxForms from './pages/StateTaxForms';
+import RefundTracking from './pages/RefundTracking';
+import TaxDueDates from './pages/TaxDueDates';
 import './index.css';
 
 // Import content data from DOCX extractions
@@ -207,7 +211,7 @@ const simplePages = {
   digitalEnablement: { title: 'Digital Enablement & IT Governance', description: 'Drive digital transformation with effective IT governance.', backgroundImage: bannerMacbook },
   deliveryFramework: { title: 'IT Service Delivery Framework', description: 'Implement structured delivery frameworks for IT service management.', backgroundImage: bannerMacbook },
   enterpriseItGovernance: { title: 'Strategy & Enterprise IT Governance', description: 'Align IT strategy with business objectives.', backgroundImage: bannerMacbook },
-  systemImplementation: { title: 'System Implementation Ride Along', description: 'Expert guidance through your system implementation journey.', backgroundImage: bannerMacbook },
+  systemImplementation: { title: 'System Implementation Assurance', description: 'Expert guidance through your system implementation journey.', backgroundImage: bannerMacbook },
   vendorRiskManagement: { title: 'Third Party & Vendor Risk Management', description: 'Assess and manage risks from third-party vendors.', backgroundImage: bannerSecurity },
   cloudGovernance: { title: 'Cloud Governance', description: 'Establish governance for cloud infrastructure and services.', backgroundImage: bannerMacbook },
   itControlsCybersecurity: { title: 'IT General Controls & Cybersecurity Governance', description: 'Strengthen IT controls and cybersecurity posture.', backgroundImage: bannerSecurity },
@@ -585,11 +589,11 @@ function App() {
           } />
 
           {/* Resources */}
-          <Route path="/refund-tracking" element={<GenericPage {...simplePages.refundTracking} />} />
-          <Route path="/tax-due-dates" element={<GenericPage {...simplePages.taxDueDates} />} />
-          <Route path="/tax-rates" element={<GenericPage {...simplePages.taxRates} />} />
+          <Route path="/refund-tracking" element={<RefundTracking />} />
+          <Route path="/tax-due-dates" element={<TaxDueDates />} />
+          <Route path="/tax-rates" element={<TaxRates />} />
           <Route path="/irs-forms" element={<IrsForms />} />
-          <Route path="/state-tax-forms" element={<GenericPage {...simplePages.stateTaxForms} />} />
+          <Route path="/state-tax-forms" element={<StateTaxForms />} />
           <Route path="/newsletter" element={<GenericPage {...simplePages.newsletter} />} />
           <Route path="/financial-calculators" element={<FinancialCalculators />} />
           <Route path="/secure-upload" element={<GenericPage {...simplePages.secureUpload} />} />

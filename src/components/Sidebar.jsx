@@ -10,15 +10,11 @@ const pageCategories = {
       { label: 'Our Values', path: '/our-values' },
       { label: 'Contact Us', path: '/contact' },
       { label: 'Book a Meeting', path: '/book-meeting' },
-      { label: 'Secure Upload', path: '/secure-upload' },
-      { label: 'Newsletter', path: '/newsletter' },
-      { label: 'Security Measures', path: '/security-measures' },
     ],
   },
   businessServices: {
     name: 'Business Services',
     pages: [
-      { label: 'Services Overview', path: '/services-business' },
       { label: 'Bookkeeping Services', path: '/bookkeeping' },
       { label: 'Fractional CFO Services', path: '/fractional-cfo' },
       { label: 'Audit, Review & Compilation', path: '/audits-reviews' },
@@ -32,33 +28,32 @@ const pageCategories = {
   individualServices: {
     name: 'Individual Services',
     pages: [
-      { label: 'Services Overview', path: '/services-individuals' },
-      { label: 'Family Wealth & Estate Planning', path: '/estate-planning' },
-      { label: 'Tax Preparation', path: '/tax-preparation-individual' },
       { label: 'Tax Planning & Strategy', path: '/tax-planning' },
+      { label: 'Tax Preparation', path: '/tax-preparation-individual' },
+      { label: 'Family Wealth & Estate Planning', path: '/estate-planning' },
     ],
   },
   taxServices: {
     name: 'Tax Services',
     pages: [
       { label: 'Tax Services Overview', path: '/tax-services' },
-      { label: 'Tax Relief Overview', path: '/tax-relief' },
+      { label: 'Business Tax Strategies', path: '/tax-strategies-business' },
       { label: 'Tax Preparation', path: '/tax-preparation-individual' },
       { label: 'Tax Planning & Strategy', path: '/tax-planning' },
+      { label: 'Tax Relief Overview', path: '/tax-relief' },
       { label: 'IRS Representation & Audit Support', path: '/irs-audit-support' },
       { label: 'Tax Debt Resolution', path: '/tax-debt-resolution' },
       { label: 'IRS Audit Defense', path: '/audit-defense' },
-      { label: 'Business Tax Strategies', path: '/tax-strategies-business' },
     ],
   },
   industries: {
     name: 'Industries',
     pages: [
       { label: 'Industries Overview', path: '/industries' },
-      { label: 'Healthcare Accounting', path: '/healthcare-accounting' },
-      { label: 'Restaurant Services', path: '/restaurants' },
-      { label: 'Dental Practice Services', path: '/dentists' },
-      { label: 'Retail Accounting', path: '/retail' },
+      { label: 'Healthcare', path: '/healthcare-accounting' },
+      { label: 'Restaurants', path: '/restaurants' },
+      { label: 'Dental Practices', path: '/dentists' },
+      { label: 'Retail', path: '/retail' },
       { label: 'Construction', path: '/construction' },
       { label: 'Law Firms', path: '/law-firms' },
     ],
@@ -71,8 +66,8 @@ const pageCategories = {
       { label: 'Data Governance', path: '/data-governance' },
       { label: 'Digital Enablement & IT Governance', path: '/digital-enablement' },
       { label: 'IT Service Delivery Framework', path: '/delivery-framework' },
-      { label: 'Strategy & Enterprise IT Governance', path: '/enterprise-it-governance' },
-      { label: 'System Implementation Ride Along', path: '/system-implementation' },
+      { label: 'IT Strategy & Enterprise Risk Management', path: '/enterprise-it-governance' },
+      { label: 'System Implementation Assurance', path: '/system-implementation' },
       { label: 'Third Party & Vendor Risk Management', path: '/vendor-risk-management' },
       { label: 'Cloud Governance', path: '/cloud-governance' },
       { label: 'IT General Controls & Cybersecurity', path: '/it-controls-cybersecurity' },
@@ -138,7 +133,7 @@ const Sidebar = ({ showBooking = true, showContact = true, showCalendar = true }
         {showContact && (
           <>
             <h3>Contact Us</h3>
-            <p style={{ color: 'var(--text-dark)' }}><a href="tel:+15551234567" style={{ color: 'var(--primary-blue)' }}><strong>Phone:</strong> (555) 123-4567</a></p>
+            <p style={{ color: 'var(--text-dark)' }}><a href="tel:+19085663799" style={{ color: 'var(--primary-blue)' }}><strong>Phone:</strong> (908) 566-3799</a></p>
             <p style={{ color: 'var(--text-dark)' }}><a href="mailto:hello@quantum-accountant.com" style={{ color: 'var(--primary-blue)' }}><strong>Email:</strong> hello@quantum-accountant.com</a></p>
             <p style={{ color: 'var(--text-dark)' }}>
               <strong>Office Hours:</strong><br />

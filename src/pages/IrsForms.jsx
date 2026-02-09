@@ -60,63 +60,63 @@ const IrsForms = () => {
     {
       category: 'General Tax Guides',
       items: [
-        { number: 'Publication 1', title: 'Your Rights As a Taxpayer' },
-        { number: 'Publication 17', title: 'Your Federal Income Tax (For Individuals)' },
-        { number: 'Publication 334', title: 'Tax Guide for Small Business' },
-        { number: 'Publication 509', title: 'Tax Calendars' },
-        { number: 'Publication 554', title: 'Tax Guide for Seniors' },
+        { number: 'Publication 1', title: 'Your Rights As a Taxpayer', link: 'https://www.irs.gov/forms-pubs/about-publication-1' },
+        { number: 'Publication 17', title: 'Your Federal Income Tax (For Individuals)', link: 'https://www.irs.gov/forms-pubs/about-publication-17' },
+        { number: 'Publication 334', title: 'Tax Guide for Small Business', link: 'https://www.irs.gov/forms-pubs/about-publication-334' },
+        { number: 'Publication 509', title: 'Tax Calendars', link: 'https://www.irs.gov/forms-pubs/about-publication-509' },
+        { number: 'Publication 554', title: 'Tax Guide for Seniors', link: 'https://www.irs.gov/forms-pubs/about-publication-554' },
       ]
     },
     {
       category: 'Deductions & Credits',
       items: [
-        { number: 'Publication 502', title: 'Medical and Dental Expenses' },
-        { number: 'Publication 503', title: 'Child and Dependent Care Expenses' },
-        { number: 'Publication 526', title: 'Charitable Contributions' },
-        { number: 'Publication 529', title: 'Miscellaneous Deductions' },
-        { number: 'Publication 596', title: 'Earned Income Credit' },
-        { number: 'Publication 970', title: 'Tax Benefits for Education' },
+        { number: 'Publication 502', title: 'Medical and Dental Expenses', link: 'https://www.irs.gov/forms-pubs/about-publication-502' },
+        { number: 'Publication 503', title: 'Child and Dependent Care Expenses', link: 'https://www.irs.gov/forms-pubs/about-publication-503' },
+        { number: 'Publication 526', title: 'Charitable Contributions', link: 'https://www.irs.gov/forms-pubs/about-publication-526' },
+        { number: 'Publication 529', title: 'Miscellaneous Deductions', link: 'https://www.irs.gov/forms-pubs/about-publication-529' },
+        { number: 'Publication 596', title: 'Earned Income Credit', link: 'https://www.irs.gov/forms-pubs/about-publication-596' },
+        { number: 'Publication 970', title: 'Tax Benefits for Education', link: 'https://www.irs.gov/forms-pubs/about-publication-970' },
       ]
     },
     {
       category: 'Business & Self-Employment',
       items: [
-        { number: 'Publication 15', title: 'Circular E, Employer\'s Tax Guide' },
-        { number: 'Publication 463', title: 'Travel, Entertainment, Gift, and Car Expenses' },
-        { number: 'Publication 535', title: 'Business Expenses' },
-        { number: 'Publication 583', title: 'Starting a Business and Keeping Records' },
-        { number: 'Publication 587', title: 'Business Use of Your Home' },
-        { number: 'Publication 946', title: 'How to Depreciate Property' },
+        { number: 'Publication 15', title: 'Circular E, Employer\'s Tax Guide', link: 'https://www.irs.gov/forms-pubs/about-publication-15' },
+        { number: 'Publication 463', title: 'Travel, Entertainment, Gift, and Car Expenses', link: 'https://www.irs.gov/forms-pubs/about-publication-463' },
+        { number: 'Publication 535', title: 'Business Expenses', link: 'https://www.irs.gov/forms-pubs/about-publication-535' },
+        { number: 'Publication 583', title: 'Starting a Business and Keeping Records', link: 'https://www.irs.gov/forms-pubs/about-publication-583' },
+        { number: 'Publication 587', title: 'Business Use of Your Home', link: 'https://www.irs.gov/forms-pubs/about-publication-587' },
+        { number: 'Publication 946', title: 'How to Depreciate Property', link: 'https://www.irs.gov/forms-pubs/about-publication-946' },
       ]
     },
     {
       category: 'Investments & Retirement',
       items: [
-        { number: 'Publication 550', title: 'Investment Income and Expenses' },
-        { number: 'Publication 551', title: 'Basis of Assets' },
-        { number: 'Publication 560', title: 'Retirement Plans for Small Business' },
-        { number: 'Publication 575', title: 'Pension and Annuity Income' },
-        { number: 'Publication 590-A', title: 'Contributions to IRAs' },
-        { number: 'Publication 590-B', title: 'Distributions from IRAs' },
+        { number: 'Publication 550', title: 'Investment Income and Expenses', link: 'https://www.irs.gov/forms-pubs/about-publication-550' },
+        { number: 'Publication 551', title: 'Basis of Assets', link: 'https://www.irs.gov/forms-pubs/about-publication-551' },
+        { number: 'Publication 560', title: 'Retirement Plans for Small Business', link: 'https://www.irs.gov/forms-pubs/about-publication-560' },
+        { number: 'Publication 575', title: 'Pension and Annuity Income', link: 'https://www.irs.gov/forms-pubs/about-publication-575' },
+        { number: 'Publication 590-A', title: 'Contributions to IRAs', link: 'https://www.irs.gov/forms-pubs/about-publication-590-a' },
+        { number: 'Publication 590-B', title: 'Distributions from IRAs', link: 'https://www.irs.gov/forms-pubs/about-publication-590-b' },
       ]
     },
     {
       category: 'Real Estate',
       items: [
-        { number: 'Publication 523', title: 'Selling Your Home' },
-        { number: 'Publication 527', title: 'Residential Rental Property' },
-        { number: 'Publication 530', title: 'Tax Information for Homeowners' },
-        { number: 'Publication 936', title: 'Home Mortgage Interest Deduction' },
+        { number: 'Publication 523', title: 'Selling Your Home', link: 'https://www.irs.gov/forms-pubs/about-publication-523' },
+        { number: 'Publication 527', title: 'Residential Rental Property', link: 'https://www.irs.gov/forms-pubs/about-publication-527' },
+        { number: 'Publication 530', title: 'Tax Information for Homeowners', link: 'https://www.irs.gov/forms-pubs/about-publication-530' },
+        { number: 'Publication 936', title: 'Home Mortgage Interest Deduction', link: 'https://www.irs.gov/forms-pubs/about-publication-936' },
       ]
     },
     {
       category: 'Special Situations',
       items: [
-        { number: 'Publication 504', title: 'Divorced or Separated Individuals' },
-        { number: 'Publication 559', title: 'Survivors, Executors and Administrators' },
-        { number: 'Publication 969', title: 'Health Savings Accounts (HSAs)' },
-        { number: 'Publication 3402', title: 'Taxation of Limited Liability Companies' },
-        { number: 'Publication 4557', title: 'Safeguarding Taxpayer Data' },
+        { number: 'Publication 504', title: 'Divorced or Separated Individuals', link: 'https://www.irs.gov/forms-pubs/about-publication-504' },
+        { number: 'Publication 559', title: 'Survivors, Executors and Administrators', link: 'https://www.irs.gov/forms-pubs/about-publication-559' },
+        { number: 'Publication 969', title: 'Health Savings Accounts (HSAs)', link: 'https://www.irs.gov/forms-pubs/about-publication-969' },
+        { number: 'Publication 3402', title: 'Taxation of Limited Liability Companies', link: 'https://www.irs.gov/forms-pubs/about-publication-3402' },
+        { number: 'Publication 4557', title: 'Safeguarding Taxpayer Data', link: 'https://www.irs.gov/forms-pubs/about-publication-4557' },
       ]
     },
   ];
@@ -240,7 +240,14 @@ const IrsForms = () => {
                   <ul style={{ margin: 0, paddingLeft: '1.25rem' }}>
                     {category.items.map((pub, i) => (
                       <li key={i} style={{ marginBottom: '0.5rem', fontSize: '0.9rem' }}>
-                        <strong>{pub.number}:</strong> {pub.title}
+                        <a 
+                          href={pub.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          style={{ color: 'var(--primary-blue)', textDecoration: 'none' }}
+                        >
+                          <strong>{pub.number}:</strong> {pub.title}
+                        </a>
                       </li>
                     ))}
                   </ul>

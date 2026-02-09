@@ -5,11 +5,6 @@ import Sidebar from '../components/Sidebar';
 const ResourcesOverview = ({ backgroundImage = '' }) => {
   const resourceCards = [
     {
-      title: 'Resources Overview',
-      description: 'Access calculators, guides, and curated tools that help you make informed financial decisions.',
-      path: '/resources',
-    },
-    {
       title: 'Financial Calculators',
       description: 'Model cash flow, retirement, loan payoff, and more with interactive tools built for planning.',
       path: '/financial-calculators',

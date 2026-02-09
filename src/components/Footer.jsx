@@ -57,7 +57,7 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Contact Us</h3>
             <ul>
-              <li><a href="tel:+15551234567">(555) 123-4567</a></li>
+              <li><a href="tel:+19085663799">(908) 566-3799</a></li>
               <li><a href="mailto:hello@quantum-accountant.com">hello@quantum-accountant.com</a></li>
               <li>Mon-Fri 9AM-6PM</li>
             </ul>

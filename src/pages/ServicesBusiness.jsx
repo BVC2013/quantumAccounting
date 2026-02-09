@@ -5,34 +5,19 @@ import Sidebar from '../components/Sidebar';
 const ServicesBusiness = ({ backgroundImage = '' }) => {
   const businessServiceCards = [
     {
-      title: 'Services Overview',
-      description: 'See how our outsourced accounting, advisory, and controller services help you steer the entire business with clarity.',
-      path: '/services-business',
-    },
-    {
-      title: 'Business Tax Preparation',
-      description: 'Accurate federal, state, and local filings for every entity type, with proactive guidance to minimize taxes.',
-      path: '/tax-preparation-business',
-    },
-    {
-      title: 'Tax Strategies',
-      description: 'Implement profit-smart tax strategies tailored to your industry, structure, and long-term goals.',
-      path: '/tax-strategies-business',
-    },
-    {
-      title: 'Bookkeeping',
+      title: 'Bookkeeping Services',
       description: 'Stay audit-ready with reconciled books, reliable financial statements, and responsive support each month.',
       path: '/bookkeeping',
     },
     {
-      title: 'CFO Services',
-      description: 'Gain fractional CFO insight for forecasting, budgeting, KPIs, and strategic planning without the full-time cost.',
-      path: '/cfo-services',
+      title: 'Fractional CFO Services',
+      description: 'Gain CFO-level insight for forecasting, budgeting, KPIs, and strategic planning without the full-time cost.',
+      path: '/fractional-cfo',
     },
     {
-      title: 'Payroll Services',
-      description: 'Ensure compliant, on-time payroll processing, tax deposits, and year-end reporting for your entire team.',
-      path: '/payroll',
+      title: 'Audit, Review & Compilation',
+      description: 'Prepare audit-ready financials, reviews, and compilations that meet stakeholder and lender expectations.',
+      path: '/audits-reviews',
     },
     {
       title: 'Cash Flow Management',
@@ -40,29 +25,24 @@ const ServicesBusiness = ({ backgroundImage = '' }) => {
       path: '/cash-flow-management',
     },
     {
-      title: 'Business Advisory',
-      description: 'Solve operational challenges, improve margins, and make confident decisions with an experienced advisor.',
-      path: '/business-advisory',
+      title: 'Centralized Invoice Processing',
+      description: 'Streamline invoice processing to improve efficiency, accuracy, and vendor relationships.',
+      path: '/invoice-processing',
     },
     {
-      title: 'New Business Formation',
-      description: 'Choose the right entity, register properly, and set up accounting systems that scale from day one.',
-      path: '/new-business-formation',
+      title: 'IPO Readiness Services',
+      description: 'Prepare your company for a successful initial public offering with comprehensive readiness support.',
+      path: '/ipo-readiness',
     },
     {
-      title: 'Audits & Reviews',
-      description: 'Prepare audit-ready financials, reviews, and compilations that meet stakeholder and lender expectations.',
-      path: '/audits-reviews',
+      title: 'Tax Strategies',
+      description: 'Implement profit-smart tax strategies tailored to your industry, structure, and long-term goals.',
+      path: '/tax-strategies-business',
     },
     {
-      title: 'Internal Controls',
+      title: 'Internal Control Services',
       description: 'Design processes that safeguard assets, prevent fraud, and give owners confidence in reported results.',
       path: '/internal-controls',
-    },
-    {
-      title: 'Non-Profit Organizations',
-      description: 'Receive dedicated nonprofit accounting support, grant tracking, and compliance for mission-driven work.',
-      path: '/nonprofit',
     },
   ];
 

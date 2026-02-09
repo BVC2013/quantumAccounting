@@ -7,17 +7,6 @@ import PageBanner from '../components/PageBanner';
 const Home = ({ backgroundImage = '/images/banners/home.jpg' }) => {
   const services = [
     {
-      title: 'Services for Individuals',
-      description: 'Personalized tax preparation, planning, and financial guidance tailored to your unique situation.',
-      items: [
-        'Individual tax preparation',
-        'Year-round tax planning',
-        'Estate planning services',
-        'Financial planning guidance',
-      ],
-      link: '/services-individuals',
-    },
-    {
       title: 'Business Services',
       description: 'Complete accounting, bookkeeping, and advisory services designed to help your business thrive.',
       items: [
@@ -29,48 +18,37 @@ const Home = ({ backgroundImage = '/images/banners/home.jpg' }) => {
       link: '/services-business',
     },
     {
+      title: 'Services for Individuals',
+      description: 'Personalized tax preparation, planning, and financial guidance tailored to your unique situation.',
+      items: [
+        'Individual tax preparation',
+        'Year-round tax planning',
+        'Estate planning services',
+        'Financial planning guidance',
+      ],
+      link: '/services-individuals',
+    },
+    {
       title: 'Tax Services',
       description: 'Expert tax preparation and planning to minimize your liability while ensuring full compliance.',
       items: [
         'Individual and business tax prep',
         'Strategic tax planning',
-        'Estate and trust tax services',
-        'Cryptocurrency tax guidance',
+        'Tax relief and IRS representation',
+        'Business tax strategies',
       ],
       link: '/tax-services',
     },
     {
-      title: 'Tax Relief Services',
-      description: 'Experienced representation and resolution for IRS issues, back taxes, and tax problems.',
+      title: 'IT & Governance',
+      description: 'Strategic IT governance, cybersecurity, and digital enablement services to protect and transform your organization.',
       items: [
-        'IRS audit representation',
-        'Back tax resolution',
-        'Payment plan negotiations',
-        'Offer in compromise assistance',
+        'AI & data governance',
+        'IT controls & cybersecurity',
+        'Cloud governance',
+        'Privacy & data protection',
       ],
-      link: '/tax-relief',
-    },
-    {
-      title: 'QuickBooks Services',
-      description: 'Professional QuickBooks setup, training, and ongoing support to streamline your accounting.',
-      items: [
-        'QuickBooks setup and configuration',
-        'Comprehensive training programs',
-        'File tune-ups and optimization',
-        'Ongoing support and maintenance',
-      ],
-      link: '/quickbooks-services',
-    },
-    {
-      title: 'Industry Specialties',
-      description: 'Deep expertise in specialized industries with tailored solutions for your unique needs.',
-      items: [
-        'Construction and real estate',
-        'Healthcare and dental practices',
-        'Legal and professional services',
-        'Manufacturing and hospitality',
-      ],
-      link: '/industries',
+      link: '/it-services',
     },
   ];
 
@@ -111,7 +89,7 @@ const Home = ({ backgroundImage = '/images/banners/home.jpg' }) => {
 
       <section className="content-section">
         <div className="container">
-          <h2 className="section-title">Comprehensive Financial Solutions</h2>
+          <h2 className="section-title">Comprehensive Accounting and Business Advisory</h2>
           <p className="section-subtitle">
             We handle the complexity so you can focus on what matters most. From
             tax preparation to strategic business planning, we're your trusted

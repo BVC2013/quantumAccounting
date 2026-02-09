@@ -5,9 +5,9 @@ import Sidebar from '../components/Sidebar';
 const ServicesIndividuals = ({ backgroundImage = '' }) => {
   const individualServiceCards = [
     {
-      title: 'Services Overview',
-      description: 'See how our individual-focused accounting, tax, and advisory services work together to simplify your finances.',
-      path: '/services-individuals',
+      title: 'Tax Planning & Strategy',
+      description: 'Plan year-round to control tax liability, manage life events, and align your decisions with financial goals.',
+      path: '/tax-planning',
     },
     {
       title: 'Tax Preparation',
@@ -15,24 +15,9 @@ const ServicesIndividuals = ({ backgroundImage = '' }) => {
       path: '/tax-preparation-individual',
     },
     {
-      title: 'Tax Planning',
-      description: 'Plan year-round to control tax liability, manage life events, and align your decisions with financial goals.',
-      path: '/tax-planning',
-    },
-    {
-      title: 'Tax Strategies',
-      description: 'Implement proactive strategies tailored to investments, self-employment, and wealth-building objectives.',
-      path: '/tax-strategies-individual',
-    },
-    {
-      title: 'Estate Planning',
+      title: 'Family Wealth & Estate Planning',
       description: 'Protect your legacy with coordinated estate, trust, and wealth transfer guidance that complements your tax plan.',
       path: '/estate-planning',
-    },
-    {
-      title: 'Financial Calculators',
-      description: 'Use interactive tools to model cash flow, savings, retirement, and tax scenarios before you make big decisions.',
-      path: '/financial-calculators',
     },
   ];
 
