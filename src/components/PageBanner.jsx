@@ -28,8 +28,8 @@ const PageBanner = ({
                 >
                   Schedule Consultation
                 </button>
-                <Link to="/services" className="btn btn-secondary">
-                  Explore Our Services
+                <Link to="/contact" className="btn btn-secondary">
+                  Contact Us
                 </Link>
               </div>
             </div>
